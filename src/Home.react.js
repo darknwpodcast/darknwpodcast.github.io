@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <Nav />
-      <Masthead buttonLabel="Learn more" />
+      <Masthead buttonLabel="Learn more" btnColor="primary" />
       <Socials />
       <About />
       <Signup />

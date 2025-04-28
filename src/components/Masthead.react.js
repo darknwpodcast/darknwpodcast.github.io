@@ -11,7 +11,7 @@ function Masthead(props) {
               Season 1 premieres this fall.
             </h2>
             <div className="mx-2">
-              <HashLink className="btn btn-primary" to="#about">
+              <HashLink className={`btn btn-${props.btnColor}`} to="#about">
                 {props.buttonLabel}
               </HashLink>
              </div>

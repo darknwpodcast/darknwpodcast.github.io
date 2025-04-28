@@ -1,3 +1,5 @@
+import { HashLink } from "react-router-hash-link";
+
 function About() {
   return (
     <>
@@ -39,9 +41,9 @@ function About() {
               </div>
               <div className="text-center">
                 <div className="mx-2 my-3">
-                  <a className="btn btn-secondary" href="/cast">
+                  <HashLink className="btn btn-secondary" to="/cast#page-top">
                     Meet the Cast
-                  </a>
+                  </HashLink>
                 </div>
               </div>
             </div>

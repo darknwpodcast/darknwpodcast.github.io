@@ -9,7 +9,7 @@ function Cast() {
   return (
     <>
       <Nav />
-      <Masthead buttonLabel="Meet the cast" />
+      <Masthead buttonLabel="Meet the cast" btnColor="secondary" />
       <section className="projects-section bg-light" id="about">
         <div className="container px-4 px-lg-5">
           <div className="row gx-0 mb-4 mb-lg-5 align-items-center">
@@ -22,7 +22,7 @@ function Cast() {
             </div>
             <div className="col-xl-4 col-lg-5">
               <div className="featured-text text-center text-lg-left">
-                <h4>Season 1</h4>
+                <h4>Main Cast</h4>
                 <p className="text-black-50 mb-0">
                   Meet the cast of Season 1. Coming Fall 2025.
                 </p>
