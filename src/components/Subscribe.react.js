@@ -10,7 +10,7 @@ function Subscribe() {
                 <h4 className="text-uppercase m-0">Newsletter</h4>
                 <hr className="my-4 mx-auto" />
                 <div className="small text-black-50">
-                  <a href="mailto:dark-nw-subscribers+subscribe@googlegroups.com">
+                  <a href="mailto:darknw+subscribe@googlegroups.com">
                     Sign Up
                   </a>
                 </div>
