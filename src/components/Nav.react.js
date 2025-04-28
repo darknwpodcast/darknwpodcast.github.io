@@ -1,3 +1,5 @@
+import { HashLink } from "react-router-hash-link";
+
 function Nav() {
   return (
     <nav
@@ -5,9 +7,9 @@ function Nav() {
       id="mainNav"
     >
       <div className="container px-4 px-lg-5">
-        <a className="navbar-brand" href="#page-top">
+        <HashLink className="navbar-brand" to="#page-top">
           Dark Northwest Podcast
-        </a>
+        </HashLink>
         <button
           className="navbar-toggler navbar-toggler-right"
           type="button"
@@ -23,19 +25,19 @@ function Nav() {
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <HashLink className="nav-link" to="/#page-top">
                 Home
-              </a>
+              </HashLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/cast">
+              <HashLink className="nav-link" to="/cast#page-top">
                 Cast
-              </a>
+              </HashLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#signup">
+              <HashLink className="nav-link" to="/#signup">
                 Contact
-              </a>
+              </HashLink>
             </li>
           </ul>
         </div>

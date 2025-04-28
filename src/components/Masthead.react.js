@@ -1,3 +1,5 @@
+import {HashLink} from 'react-router-hash-link';
+
 function Masthead(props) {
   return (
     <header className="masthead">
@@ -9,9 +11,9 @@ function Masthead(props) {
               Season 1 premieres this fall.
             </h2>
             <div className="mx-2">
-              <a className="btn btn-primary" href="#about">
+              <HashLink className="btn btn-primary" to="#about">
                 {props.buttonLabel}
-              </a>
+              </HashLink>
              </div>
           </div>
         </div>
