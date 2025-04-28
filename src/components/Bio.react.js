@@ -10,9 +10,7 @@ function Bio(props) {
             <div className="d-flex h-100">
               <div className="project-text w-100 my-auto text-center text-lg-left">
                 <h4 className="text-white">{props.name}</h4>
-                <p className="mb-0 text-white-50">
-                  {props.blurb}
-                </p>
+                <p className="mb-0 text-white-50">{props.blurb}</p>
               </div>
             </div>
           </div>
@@ -30,9 +28,7 @@ function Bio(props) {
             <div className="d-flex h-100">
               <div className="project-text w-100 my-auto text-center text-lg-right">
                 <h4 className="text-white">{props.name}</h4>
-                <p className="mb-0 text-white-50">
-                  {props.blurb}
-                </p>
+                <p className="mb-0 text-white-50">{props.blurb}</p>
               </div>
             </div>
           </div>
