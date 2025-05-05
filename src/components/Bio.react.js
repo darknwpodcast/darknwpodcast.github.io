@@ -1,16 +1,36 @@
+import Socials from "./Socials.react.js";
+const castPhotos = require.context("../img", true);
+
 function Bio(props) {
-  if (props.flavor === "A") {
+  const member = props.bio;
+  const photo = castPhotos(member.photo);
+
+  const content = (
+    <>
+      <h4 className="text-white">{member.name}</h4>
+      <p className="mb-0 text-white-50">{member.blurb}</p>
+      <br />
+      <p className="mb-0 text-white-50">
+        <b>Roles:</b> {member.roles}
+      </p>
+      <p className="mb-0 text-white-50">
+        <b>Voice of:</b> {member.voiceOf}
+      </p>
+        <Socials socials={member.socials} />
+    </>
+  );
+
+  if (member.flavor === "A") {
     return (
       <div className="row gx-0 mb-5 mb-lg-0 justify-content-center">
         <div className="col-lg-6">
-          <img className="img-fluid" src="./demo-image-01.jpg" alt="..." />
+          <img className="img-fluid img-bio" src={photo} alt={member.name} />
         </div>
         <div className="col-lg-6">
           <div className="bg-black text-center h-100 project">
             <div className="d-flex h-100">
               <div className="project-text w-100 my-auto text-center text-lg-left">
-                <h4 className="text-white">{props.name}</h4>
-                <p className="mb-0 text-white-50">{props.blurb}</p>
+                {content}
               </div>
             </div>
           </div>
@@ -21,14 +41,13 @@ function Bio(props) {
     return (
       <div className="row gx-0 justify-content-center" id="cast">
         <div className="col-lg-6">
-          <img className="img-fluid" src="./demo-image-02.jpg" alt="..." />
+          <img className="img-fluid img-bio" src={photo} alt={member.name} />
         </div>
         <div className="col-lg-6 order-lg-first">
           <div className="bg-black text-center h-100 project">
             <div className="d-flex h-100">
               <div className="project-text w-100 my-auto text-center text-lg-right">
-                <h4 className="text-white">{props.name}</h4>
-                <p className="mb-0 text-white-50">{props.blurb}</p>
+                {content}
               </div>
             </div>
           </div>

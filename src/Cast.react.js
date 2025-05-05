@@ -4,6 +4,7 @@ import Signup from "./components/Signup.react";
 import Socials from "./components/Socials.react.js";
 import Subscribe from "./components/Subscribe.react.js";
 import Bio from "./components/Bio.react.js";
+const cast = require("./data/cast.json");
 
 function Cast() {
   return (
@@ -22,23 +23,22 @@ function Cast() {
             </div>
             <div className="col-xl-4 col-lg-5">
               <div className="featured-text text-center text-lg-left">
-                <h4>Main Cast</h4>
+                <h3>Main Cast</h3>
                 <p className="text-black-50 mb-0">
                   Meet the cast of Season 1. Coming Fall 2025.
                 </p>
               </div>
             </div>
           </div>
-          <Bio
-            flavor="A"
-            name="Ron Leota"
-            blurb="Co-creator, writer, main cast, editor, lead audio engineer"
-          />
-          <Bio
-            flavor="B"
-            name="Kairsten Fay"
-            blurb="Co-creator, lead writer, main cast, editor, webmaster"
-          />
+          {cast.map((member, idx) => {
+            return (
+              <Bio
+                key={member.name}
+                bio={member}
+                flavor={idx % 2 === 0 ? "A" : "B"}
+              />
+            );
+          })}
         </div>
       </section>
       <Signup />

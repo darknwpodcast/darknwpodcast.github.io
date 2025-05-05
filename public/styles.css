@@ -615,6 +615,10 @@ progress {
   height: auto;
 }
 
+.img-bio {
+  filter: grayscale(1) !important;
+}
+
 .figure {
   display: inline-block;
 }

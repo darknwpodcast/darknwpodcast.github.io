@@ -1,23 +1,23 @@
-{
-  "main": [
-    {
-      "name": "Ron Leota",
-      "blurb": "Ron Leota is an audio engineer and multi-faceted nerd born and raised in the Pacific Northwest. When he's not in the studio recording or editing audio projects, he's designing roleplaying games. He was the original creator and audio engineer for the NW Nerdcast podcast and now develops games under the Leota Roleplaying moniker. Ron has also lent his voice to various audiobooks and indie games as a voice actor.",
-      "roles": "Co-Creator, Assistant Writer, Lead Audio Engineer, & Editor",
-      "voice of": "Jake, Chef",
-      "socials": {
-        "fb": "facebook.com/leotaroleplaying"
-      }
-    },
-    {
-      "name": "Kairsten Fay",
-      "blurb": "Kairsten Fay is a software engineer and storyteller who relocated to the Pacific Northwest in 2016. This podcast is her first work of fiction; she has previously performed comedic storytelling and comedy stand-up. She also maintains a tech culture blog on Medium for other software developers.",
-      "roles": "Co-Creator, Lead Writer, Editor, & Webmaster",
-      "voice of": "Hazel, Brittney (hostess)",
-      "socials": {
-        "medium": "https://kairsten-fay.medium.com",
-        "threads": "https://www.threads.com/@kairstenfay"
-      }
+[
+  {
+    "name": "Ron Leota",
+    "photo": "./Ron.jpg",
+    "blurb": "Ron Leota is an audio engineer and multi-faceted nerd born and raised in the Pacific Northwest. When he's not in the studio recording or editing audio projects, he's designing roleplaying games. He was the original creator and audio engineer for the NW Nerdcast podcast and now develops games under the Leota Roleplaying moniker. Ron has also lent his voice to various audiobooks and indie games as a voice actor.",
+    "roles": "Co-Creator, Assistant Writer, Lead Audio Engineer, & Editor",
+    "voiceOf": "Jake, Chef",
+    "socials": {
+      "fb": "facebook.com/leotaroleplaying"
     }
-  ]
-}
+  },
+  {
+    "name": "Kairsten Fay",
+    "photo": "./Kairsten.jpg",
+    "blurb": "Kairsten Fay is a software engineer and storyteller who relocated to the Pacific Northwest in 2016. This podcast is her first work of fiction; she has previously performed comedy storytelling and stand-up. She also maintains a tech culture blog on Medium for other software developers.",
+    "roles": "Co-Creator, Lead Writer, Editor, & Webmaster",
+    "voiceOf": "Hazel, Brittney (hostess)",
+    "socials": {
+      "medium": "https://kairsten-fay.medium.com",
+      "threads": "https://www.threads.com/@kairstenfay"
+    }
+  }
+]

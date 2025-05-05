@@ -30,7 +30,7 @@ function About() {
             </div>
             <div className="col-xl-4 col-lg-5">
               <div className="featured-text text-center text-lg-left">
-                <h4>Season 1</h4>
+                <h3>Season 1</h3>
                 <p className="text-black-50 mb-0">
                   Our first season is an original story based around the 1910
                   Wellington Train Disaster, the worst rail disaster in US
