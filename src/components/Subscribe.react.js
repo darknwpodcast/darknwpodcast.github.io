@@ -21,11 +21,11 @@ function Subscribe() {
             <div className="card py-4 h-100">
               <div className="card-body text-center">
                 <i className="fas fa-brands fa-google text-primary mb-2"></i>
-                <h4 className="text-uppercase m-0">Google Group</h4>
+                <h4 className="text-uppercase m-0">Google Groups</h4>
                 <hr className="my-4 mx-auto" />
                 <div className="small text-black-50">
                   <a href="https://groups.google.com/g/darknw/">
-                    View our Google Group
+                    View our newsletter via Google Groups
                   </a>
                 </div>
               </div>
