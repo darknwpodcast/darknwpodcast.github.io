@@ -31,8 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: build 
-        run: npm run build && git commit -m 'Build'
+      - name: build
+        run: npm run build && echo www.darknw.com > CNAME && git add CNAME && git commit -m 'Build'
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
