@@ -615,6 +615,10 @@ progress {
   height: auto;
 }
 
+.img-bio {
+  filter: grayscale(1) !important;
+}
+
 .figure {
   display: inline-block;
 }
@@ -11161,7 +11165,7 @@ body {
 }
 
 .contact-section {
-  padding-top: 5rem;
+  padding-top: 0.25rem !important;
 }
 .contact-section .card {
   border: 0;
@@ -11189,7 +11193,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 100%;
   line-height: 3rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.7) !important;
 }
 .contact-section .social a:hover {
   color: rgba(255, 255, 255, 0.5);
