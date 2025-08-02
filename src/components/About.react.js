@@ -9,10 +9,7 @@ function About() {
             <div className="col-lg-8">
               <h2 className="text-white mb-4">About</h2>
               <p className="text-white-50">
-                Dark Northwest (NW) is a scripted audio drama with a full cast
-                of performers. Each season brings a new multi-episode story to
-                life, inspired by real hauntings in the Pacific Northwest in the
-                style of horror-comedy with historical fiction elements.
+                 Dark Northwest is a scripted audio drama podcast with a full voice cast. Each season brings a multi-episode story to life, inspired by supernatural events in the PNW. Season 1 premieres Sep 5th.
               </p>
             </div>
           </div>
