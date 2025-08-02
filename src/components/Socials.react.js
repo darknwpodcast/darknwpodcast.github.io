@@ -6,9 +6,9 @@ function Socials(props) {
       patreon: "https://www.patreon.com/DarkNWPodcast",
       tiktok: "https://www.tiktok.com/@darknwpodcast",
       youtube: "https://www.youtube.com/@DarkNWPodcast",
-      instagram: "https://www.instagram.com/darknwpodcast/",
+      ig: "https://www.instagram.com/darknwpodcast/",
       bluesky: "https://bsky.app/profile/darknwpodcast.bsky.social",
-      threads: "https://www.threads.com/@darknwpodcast",
+      // threads: "https://www.threads.com/@darknwpodcast",
     };
   } else {
     socials = props.socials;
@@ -37,8 +37,8 @@ function Socials(props) {
             <i className="fab fa-youtube"></i>
           </a>
         ) : null}
-        {socials["instagram"] ? (
-          <a className="mx-2" href={socials["instagram"]}>
+        {socials["ig"] ? (
+          <a className="mx-2" href={socials["ig"]}>
             <i class="fa-brands fa-instagram"></i>
           </a>
         ) : null}
@@ -52,11 +52,16 @@ function Socials(props) {
             <i className="fab fa-medium"></i>
           </a>
         ) : null}
-        {/* {socials["threads"] ? (
+        {socials["threads"] ? (
           <a className="mx-2" href={socials["threads"]}>
             <i className="fab fa-threads"></i>
           </a>
-        ) : null} */}
+        ) : null}
+        {socials["email"] ? (
+          <a className="mx-2" href={socials["email"]}>
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        ) : null}
       </div>
     </section>
   );

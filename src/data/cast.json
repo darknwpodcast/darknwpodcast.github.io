@@ -3,8 +3,8 @@
     "name": "Ron Leota",
     "photo": "./Ron.jpg",
     "blurb": "Ron Leota is an audio engineer and multi-faceted nerd born and raised in the Pacific Northwest. When he's not in the studio recording or editing audio projects, he's designing roleplaying games. He was the original creator and audio engineer for the NW Nerdcast podcast and now develops games under the Leota Roleplaying moniker. Ron has also lent his voice to various audiobooks and indie games as a voice actor.",
-    "roles": "Co-Creator, Assistant Writer, Lead Audio Engineer, & Editor",
-    "voiceOf": "Jake, Chef",
+    "roles": "Co-Creator, Director, Audio Engineer, Editor, and Voice Actor",
+    "voiceOf": "Jake",
     "socials": {
       "fb": "facebook.com/leotaroleplaying"
     }
@@ -12,12 +12,46 @@
   {
     "name": "Kairsten Fay",
     "photo": "./Kairsten.jpg",
-    "blurb": "Kairsten Fay is a software engineer and storyteller who relocated to the Pacific Northwest in 2016. This podcast is her first work of fiction; she has previously performed comedy storytelling and stand-up. She also maintains a tech culture blog on Medium for other software developers.",
-    "roles": "Co-Creator, Lead Writer, Editor, & Webmaster",
-    "voiceOf": "Hazel, Brittney (hostess)",
+    "blurb": "Kairsten Fay is a software engineer and storyteller who has lived in the Pacific Northwest since 2016. This podcast is her first work of fiction; she has previously performed comedic storytelling and comedy stand-up. She also runs a tech culture blog on Medium for other software developers.",
+    "roles": "Co-Creator, Writer, Editor, Voice Actor, and Webmaster",
+    "voiceOf": "Hazel",
     "socials": {
       "medium": "https://kairsten-fay.medium.com",
       "threads": "https://www.threads.com/@kairstenfay"
     }
+  },
+  {
+    "name": "Robbie Clifford",
+    "photo": "./Robbie.jpg",
+    "blurb": "Robbie Clifford recently landed on Tacoma, but grew up in Japan and is, in fact, part mecha. He is a freelance illustrator who has done design work for Marvel & Lucasfilm, and recently turned his sights on voice acting.",
+    "roles": "Voice Actor",
+    "voiceOf": "Andy",
+    "socials": {
+      "ig": "https://www.instagram.com/cyrinnic/",
+      "threads": "https://www.threads.com/@cyrinnic",
+      "tiktok": "https://www.tiktok.com/@robclifford",
+      "website": "http://www.bigrobotart.com"
+    }
+  },
+  {
+    "name": "Arden",
+    "photo": "./demo-image-01.jpg",
+    "blurb": "Cosplay content creator and Actor, this is Arden's first Acting role off the stage. His acting experience spans over 5 years and 12 shows, most of which musicals, though he’s been in several he straight plays, has several improv shows under his belt and even works as a scare actor every October",    "roles": "Voice Actor",
+    "voiceOf": "Lilly",
+    "socials": {
+      "ig": "https://www.instagram.com/ardendoescosplay",
+      "tiktok": "https://www.tiktok.com/@ardendoescosplay"
+    }
+  },
+  {
+    "name": "Cassandra Schwartz",
+    "photo": "./Cassandra.jpg",
+    "blurb": "Cassandra is thrilled to make her voice acting debut with Dark Northwest, a project that intertwines her passions for acting, history, and storytelling. Born and raised in California, Cassandra discovered the power of combining these interests while performing first-person historical interpretations at Ardenwood Historic Park. Over the years, she has pursued these passions separately, earning a bachelor's degree in history and also LARPing for the past decade. Now, she is excited to bring them together again. Cassandra traded the California sunshine for the moody Pacific Northwest 15 years ago, eventually settling in Washington state. Day to day, she can be found raising a tiny human with her husband, volunteering with her local Pride group, experimenting in the kitchen, and enjoying a good book (usually at the same time, thanks to audiobooks). Cassandra looks forward to exploring more voice acting and narration opportunities in the future.",
+    "roles": "Voice Actor",
+    "voiceOf": "Tara",
+    "socials": {
+      "email": "mailto:Cass.schwartz@gmail.com"
+    }
   }
 ]
+

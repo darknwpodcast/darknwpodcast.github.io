@@ -24,7 +24,7 @@ function Bio(props) {
     return (
       <div className="row gx-0 mb-5 mb-lg-0 justify-content-center">
         <div className="col-lg-6">
-          <img className="img-fluid img-bio" src={photo} alt={member.name} />
+          <img className="img-fluid" src={photo} alt={member.name} />
         </div>
         <div className="col-lg-6">
           <div className="bg-black text-center h-100 project">
