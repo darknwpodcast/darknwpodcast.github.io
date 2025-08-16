@@ -4,10 +4,9 @@ function Socials(props) {
     socials = {
       fb: "https://facebook.com/DarkNWPodcast",
       ig: "https://www.instagram.com/darknwpodcast/",
-      patreon: "https://www.patreon.com/DarkNWPodcast",
       tiktok: "https://www.tiktok.com/@darknwpodcast",
       bluesky: "https://bsky.app/profile/darknwpodcast.bsky.social",
-      // threads: "https://www.threads.com/@darknwpodcast",
+      threads: "https://www.threads.com/@darknwpodcast",
     };
   } else {
     socials = props.socials;
@@ -17,24 +16,19 @@ function Socials(props) {
     <section className="contact-section bg-black">
         <h2 className="link-header text-white mb-4">Follow us on social media</h2>
       <div className="social d-flex justify-content-center">
-        {socials["fb"] ? (
-          <a className="mx-2" href={socials["fb"]}>
-            <i className="fab fa-facebook-f"></i>
-          </a>
-        ) : null}
-            {socials["ig"] ? (
-              <a className="mx-2" href={socials["ig"]}>
-                <i className="fa-brands fa-instagram"></i>
-              </a>
-            ) : null}
-        {socials["patreon"] ? (
-          <a className="mx-2" href={socials["patreon"]}>
-            <i className="fa-brands fa-patreon"></i>
-          </a>
-        ) : null}
         {socials["tiktok"] ? (
           <a className="mx-2" href={socials["tiktok"]}>
             <i className="fab fa-tiktok"></i>
+          </a>
+        ) : null}
+        {socials["ig"] ? (
+          <a className="mx-2" href={socials["ig"]}>
+            <i className="fa-brands fa-instagram"></i>
+          </a>
+        ) : null}
+        {socials["fb"] ? (
+          <a className="mx-2" href={socials["fb"]}>
+            <i className="fab fa-facebook-f"></i>
           </a>
         ) : null}
         {socials["youtube"] ? (
