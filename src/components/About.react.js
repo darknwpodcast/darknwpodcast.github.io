@@ -8,7 +8,12 @@ function About() {
           <div className="row gx-4 gx-lg-5 justify-content-center">
             <div className="col-lg-8">
               <h2 className="text-white mb-4">About</h2>
-      <iframe title="s01-trailer-90-sec" src="https://www.youtube.com/embed/aBIK0imds_0" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <iframe title="s01-trailer-90-sec"
+                src="https://www.youtube.com/embed/aBIK0imds_0"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen></iframe>
               <p className="text-white-50">
                  Dark Northwest is a scripted audio drama podcast with a full voice cast. Each season brings a multi-episode story to life, inspired by supernatural events in the PNW. Season 1 premieres Sep 5th.
               </p>
