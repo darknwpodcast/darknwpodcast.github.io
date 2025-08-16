@@ -16,7 +16,7 @@ function Bio(props) {
       <p className="mb-0 text-white-50">
         <b>Voice of:</b> {member.voiceOf}
       </p>
-        <Socials socials={member.socials} />
+        <Socials socials={member.socials} showHeader={false} />
     </>
   );
 

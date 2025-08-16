@@ -3,7 +3,9 @@ import Masthead from "./components/Masthead.react";
 import Signup from "./components/Signup.react";
 import Socials from "./components/Socials.react.js";
 import Subscribe from "./components/Subscribe.react.js";
+import Support from "./components/Support.react.js";
 import Bio from "./components/Bio.react.js";
+
 const cast = require("./data/cast.json");
 
 function Cast() {
@@ -44,6 +46,7 @@ function Cast() {
       <Signup />
       <Subscribe />
       <Socials />
+      <Support />
     </>
   );
 }

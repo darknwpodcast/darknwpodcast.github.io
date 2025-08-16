@@ -21,6 +21,16 @@
     }
   },
   {
+    "name": "E. Alex Gardipe",
+    "photo": "./demo-image-02.jpg",
+    "blurb": "E. Alex Gardipe is a Seattle based actor and comedian with credits in both independent films and videogames. A lifelong gamer and LARPer, this giant of a man is literally one of the biggest nerds you'll ever meet!",
+    "roles": "Voice Actor",
+    "voiceOf": "Dark Northwest (Narrator)",
+    "socials": {
+      "website": "https://alexponential.wixsite.com/voiceactor"
+    }
+  },
+  {
     "name": "Robbie Clifford",
     "photo": "./Robbie.jpg",
     "blurb": "Robbie Clifford recently landed on Tacoma, but grew up in Japan and is, in fact, part mecha. He is a freelance illustrator who has done design work for Marvel & Lucasfilm, and recently turned his sights on voice acting.",
@@ -52,6 +62,16 @@
     "socials": {
       "email": "mailto:Cass.schwartz@gmail.com"
     }
+  },
+  {
+    "name": "Zephyr Moon",
+    "photo": "./Zephyr.jpeg",
+    "blurb": "A lifelong horror fan and podcast junkie, and this project marks his voice acting debut—screaming, muttering, and meeting horrific ends as additional voices and background characters in Dark Northwest. Zephyr grew up along Stevens Pass, where the story is set, so getting to be part of something spooky in his own backyard feels extra special. Zephyr comes from a background in theatre, writing, and LARP, and he has always loved stepping into character. Voice acting has been a dream of his for years, and he is beyond excited (and maybe a little scared) to finally bring that to life in Dark Northwest.",
+    "roles": "Voice Actor",
+    "voiceOf": "Gene the Skier",
+    "socials": {
+      "tiktok": "https://www.tiktok.com/@hwymancharon?_t=ZT-8ycuCohkx0X&_r=1",
+      "ig": "https://www.instagram.com/spacedoutzephyr?igsh=MTNpaG96cHFnN3k3cg==&utm_source=qr"
+    }
   }
 ]
-

@@ -14,8 +14,13 @@ function Socials(props) {
 
   return (
     <section className="contact-section bg-black">
-        <h2 className="link-header text-white mb-4">Follow us on social media</h2>
+      {props.showHeader === false ? null : <h2 className="link-header text-white mb-4">Follow us on social media</h2>}
       <div className="social d-flex justify-content-center">
+        {socials["website"] ? (
+          <a className="mx-2" href={socials["website"]}>
+              <i class="fa-solid fa-globe"></i>
+          </a>
+        ) : null}
         {socials["tiktok"] ? (
           <a className="mx-2" href={socials["tiktok"]}>
             <i className="fab fa-tiktok"></i>
