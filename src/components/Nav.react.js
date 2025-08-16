@@ -8,7 +8,7 @@ function Nav() {
     >
       <div className="container px-4 px-lg-5">
         <HashLink className="navbar-brand" to="#page-top">
-          Dark Northwest Podcast
+          Dark Northwest
         </HashLink>
         <button
           className="navbar-toggler navbar-toggler-right"

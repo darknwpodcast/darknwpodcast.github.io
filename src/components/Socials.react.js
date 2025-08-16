@@ -3,10 +3,10 @@ function Socials(props) {
   if (props?.socials === undefined) {
     socials = {
       fb: "https://facebook.com/DarkNWPodcast",
+      ig: "https://www.instagram.com/darknwpodcast/",
       patreon: "https://www.patreon.com/DarkNWPodcast",
       tiktok: "https://www.tiktok.com/@darknwpodcast",
       youtube: "https://www.youtube.com/@DarkNWPodcast",
-      ig: "https://www.instagram.com/darknwpodcast/",
       bluesky: "https://bsky.app/profile/darknwpodcast.bsky.social",
       // threads: "https://www.threads.com/@darknwpodcast",
     };
@@ -22,6 +22,11 @@ function Socials(props) {
             <i className="fab fa-facebook-f"></i>
           </a>
         ) : null}
+            {socials["ig"] ? (
+              <a className="mx-2" href={socials["ig"]}>
+                <i className="fa-brands fa-instagram"></i>
+              </a>
+            ) : null}
         {socials["patreon"] ? (
           <a className="mx-2" href={socials["patreon"]}>
             <i className="fa-brands fa-patreon"></i>
@@ -35,11 +40,6 @@ function Socials(props) {
         {socials["youtube"] ? (
           <a className="mx-2" href={socials["youtube"]}>
             <i className="fab fa-youtube"></i>
-          </a>
-        ) : null}
-        {socials["ig"] ? (
-          <a className="mx-2" href={socials["ig"]}>
-            <i className="fa-brands fa-instagram"></i>
           </a>
         ) : null}
         {socials["bluesky"] ? (

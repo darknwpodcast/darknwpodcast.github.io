@@ -476,9 +476,9 @@ output {
 iframe {
   border: 0;
   margin: 0 auto;
-  width: '100%';
+  width: 100%;
   max-width: 450px;
-  height: auto;
+  height: 80%;
 }
 
 summary {
@@ -11170,7 +11170,7 @@ body {
 }
 
 .contact-section {
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 .contact-section .card {
   border: 0;
