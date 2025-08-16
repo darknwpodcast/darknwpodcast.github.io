@@ -13,6 +13,7 @@ function platforms(props) {
 
   return (
     <section className="contact-section bg-black">
+      <h2 className="link-header text-white mb-4">Subscribe to our podcast</h2>
       <div className="social d-flex justify-content-center">
         {platforms["sp"] ? (
           <a className="mx-2" href={platforms["sp"]}>
