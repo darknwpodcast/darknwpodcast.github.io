@@ -10,7 +10,7 @@ function Masthead(props) {
             <h2 className="text-white-50 mx-auto mt-2 mb-5">
               Season 1 premieres September 5th.
             </h2>
-            <iframe data-testid="embed-iframe"
+            <iframe title="spotify-trailer" data-testid="embed-iframe"
             src="https://open.spotify.com/embed/show/76qB6wBKZL129MppCz8tZC?utm_source=generator"
             width="90%"
             height="auto"

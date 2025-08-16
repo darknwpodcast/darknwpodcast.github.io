@@ -1,13 +1,16 @@
 import { HashLink } from "react-router-hash-link";
+import RssFeedFetcher from "../api/RssFeedFetcher.js";
 
 function About() {
+  const rss = new RssFeedFetcher();
+  rss.fetchSummary();
+
   return (
     <>
       <section className="about-section text-center" id="about">
         <div className="container px-4 px-lg-5">
           <div className="row gx-4 gx-lg-5 justify-content-center">
             <div className="col-lg-8">
-              <h2 className="text-white mb-4">About</h2>
                 {/* <iframe title="s01-trailer-90-sec"
                 src="https://www.youtube.com/embed/aBIK0imds_0"
                 frameBorder="0"
@@ -16,9 +19,7 @@ function About() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen></iframe> */}
-              <p className="text-white-50">
-                 Dark Northwest is a scripted audio drama podcast with a full voice cast. Each season brings a multi-episode story to life, inspired by supernatural events in the PNW. Season 1 premieres Sep 5th.
-              </p>
+              <div id="rss-summary-id" className="text-white-50" />
             </div>
           </div>
         </div>
@@ -43,6 +44,11 @@ Season 1 premieres September 5th on all your favorite podcast platforms.
                 </p>
               </div>
               <div className="text-center">
+                 <div className="mx-2 my-3">
+                  <HashLink className="btn btn-primary" to="/episodes#page-top">
+                    Listen Now
+                  </HashLink>
+                </div>
                 <div className="mx-2 my-3">
                   <HashLink className="btn btn-secondary" to="/cast#page-top">
                     Meet the Cast

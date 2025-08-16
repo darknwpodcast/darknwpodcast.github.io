@@ -17,12 +17,12 @@ function platforms(props) {
       <div className="social d-flex justify-content-center">
         {platforms["sp"] ? (
           <a className="mx-2" href={platforms["sp"]}>
-          <i class="fa-brands fa-spotify"></i>
+          <i className="fa-brands fa-spotify"></i>
           </a>
         ) : null}
         {platforms["ap"] ? (
           <a className="mx-2" href={platforms["ap"]}>
-            <i class="fa-brands fa-apple"></i>
+            <i className="fa-brands fa-apple"></i>
           </a>
         ) : null}
         {platforms["yt"] ? (
@@ -32,7 +32,7 @@ function platforms(props) {
         ) : null}
         {platforms["am"] ? (
           <a className="mx-2" href={platforms["am"]}>
-              <i class="fa-brands fa-amazon"></i>
+              <i className="fa-brands fa-amazon"></i>
           </a>
         ) : null}
       </div>

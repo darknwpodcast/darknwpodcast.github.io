@@ -8,6 +8,8 @@ import Signup from "./components/Signup.react.js";
 import Subscribe from "./components/Subscribe.react.js";
 import Support from "./components/Support.react.js";
 
+import * as React from "react";
+
 function Home() {
   return (
     <>
@@ -17,9 +19,9 @@ function Home() {
       <Socials />
       <About />
       <Signup />
-      <Subscribe />
       <Socials />
       <Support />
+      <Subscribe />
     </>
   );
 }

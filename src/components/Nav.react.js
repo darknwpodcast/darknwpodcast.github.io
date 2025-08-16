@@ -30,6 +30,11 @@ function Nav() {
               </HashLink>
             </li>
             <li className="nav-item">
+              <HashLink className="nav-link" to="/episodes#page-top">
+                Episodes
+              </HashLink>
+            </li>
+            <li className="nav-item">
               <HashLink className="nav-link" to="/cast#page-top">
                 Cast
               </HashLink>
@@ -39,6 +44,7 @@ function Nav() {
                 Contact
               </HashLink>
             </li>
+
           </ul>
         </div>
       </div>

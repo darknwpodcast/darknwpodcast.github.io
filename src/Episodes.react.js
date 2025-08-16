@@ -4,15 +4,16 @@ import Signup from "./components/Signup.react";
 import Socials from "./components/Socials.react.js";
 import Subscribe from "./components/Subscribe.react.js";
 import Support from "./components/Support.react.js";
-import Bio from "./components/Bio.react.js";
+import RssFeedFetcher from "./api/RssFeedFetcher.js";
 
-const cast = require("./data/cast.json");
+function Episodes() {
+  const rss = new RssFeedFetcher();
+  rss.fetchEpisodes();
 
-function Cast() {
   return (
     <>
       <Nav />
-      <Masthead buttonLabel="Meet the cast" btnColor="secondary" />
+      <Masthead buttonLabel="See episodes" btnColor="secondary" />
       <section className="projects-section bg-light" id="about">
         <div className="container px-4 px-lg-5">
           <div className="row gx-0 mb-4 mb-lg-5 align-items-center">
@@ -25,22 +26,15 @@ function Cast() {
             </div>
             <div className="col-xl-4 col-lg-5">
               <div className="featured-text text-center text-lg-left">
-                <h3>Main Cast</h3>
+                <h3>Episodes</h3>
+                <div id="rss-feed-id" />
+                <hr />
                 <p className="text-black-50 mb-0">
-                  Meet the cast of Season 1. Coming Fall 2025.
+                  See all <a href="https://docs.google.com/document/d/1ADhFr18cn5tB_A-kej9Bj-ei6ODsaiKW9QRAPujqYok/edit?usp=sharing">SFX attributions</a>
                 </p>
               </div>
             </div>
           </div>
-          {cast.map((member, idx) => {
-            return (
-              <Bio
-                key={member.name}
-                bio={member}
-                flavor={idx % 2 === 0 ? "A" : "B"}
-              />
-            );
-          })}
         </div>
       </section>
       <Signup />
@@ -51,4 +45,4 @@ function Cast() {
   );
 }
 
-export default Cast;
+export default Episodes;
