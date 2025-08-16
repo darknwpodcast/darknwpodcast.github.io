@@ -24,7 +24,7 @@ function Socials(props) {
         ) : null}
         {socials["patreon"] ? (
           <a className="mx-2" href={socials["patreon"]}>
-            <i class="fa-brands fa-patreon"></i>
+            <i className="fa-brands fa-patreon"></i>
           </a>
         ) : null}
         {socials["tiktok"] ? (
@@ -39,7 +39,7 @@ function Socials(props) {
         ) : null}
         {socials["ig"] ? (
           <a className="mx-2" href={socials["ig"]}>
-            <i class="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-instagram"></i>
           </a>
         ) : null}
         {socials["bluesky"] ? (
@@ -59,7 +59,7 @@ function Socials(props) {
         ) : null}
         {socials["email"] ? (
           <a className="mx-2" href={socials["email"]}>
-            <i class="fa-solid fa-envelope"></i>
+            <i className="fa-solid fa-envelope"></i>
           </a>
         ) : null}
       </div>
