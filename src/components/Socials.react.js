@@ -18,7 +18,7 @@ function Socials(props) {
       <div className="social d-flex justify-content-center">
         {socials["website"] ? (
           <a className="mx-2" href={socials["website"]}>
-              <i class="fa-solid fa-globe"></i>
+              <i className="fa-solid fa-globe"></i>
           </a>
         ) : null}
         {socials["tiktok"] ? (
