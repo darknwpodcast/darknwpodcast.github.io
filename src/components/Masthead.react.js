@@ -12,7 +12,7 @@ function Masthead(props) {
             </h2>
             <iframe data-testid="embed-iframe"
             src="https://open.spotify.com/embed/show/76qB6wBKZL129MppCz8tZC?utm_source=generator"
-            width="80%"
+            width="90%"
             height="auto"
             frameBorder="0"
             allowFullScreen=""

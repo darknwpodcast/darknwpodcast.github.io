@@ -476,9 +476,8 @@ output {
 iframe {
   border: 0;
   margin: 0 auto;
-  max-width: 806;
-  max-height: 453;
-  width: auto;
+  width: '100%';
+  max-width: 450px;
   height: auto;
 }
 
