@@ -6,6 +6,7 @@ import Platforms from "./components/Platforms.react.js";
 import Socials from "./components/Socials.react.js";
 import Signup from "./components/Signup.react.js";
 import Subscribe from "./components/Subscribe.react.js";
+import Support from "./components/Support.react.js";
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <Signup />
       <Subscribe />
       <Socials />
+      <Support />
     </>
   );
 }
