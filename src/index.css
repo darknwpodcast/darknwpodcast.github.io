@@ -11075,7 +11075,7 @@ body {
 .masthead {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 125vh;
   min-height: 35rem;
   padding: 15rem 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../public/bg-masthead.jpg");
@@ -11170,7 +11170,7 @@ body {
 }
 
 .contact-section {
-  padding-top: 2rem;
+  padding-top: 25vh;
 }
 .contact-section .card {
   border: 0;
@@ -11189,7 +11189,7 @@ body {
   width: 3rem;
 }
 .contact-section .social {
-  margin-top: 5rem;
+  margin-top: 0.5rem;
 }
 .contact-section .social a {
   text-align: center;
@@ -11205,6 +11205,11 @@ body {
 }
 .contact-section .social a:active {
   color: #fff;
+}
+
+.link-header {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .footer {

@@ -6,7 +6,6 @@ function Socials(props) {
       ig: "https://www.instagram.com/darknwpodcast/",
       patreon: "https://www.patreon.com/DarkNWPodcast",
       tiktok: "https://www.tiktok.com/@darknwpodcast",
-      youtube: "https://www.youtube.com/@DarkNWPodcast",
       bluesky: "https://bsky.app/profile/darknwpodcast.bsky.social",
       // threads: "https://www.threads.com/@darknwpodcast",
     };
@@ -16,6 +15,7 @@ function Socials(props) {
 
   return (
     <section className="contact-section bg-black">
+        <h2 className="link-header text-white mb-4">Follow us on social media</h2>
       <div className="social d-flex justify-content-center">
         {socials["fb"] ? (
           <a className="mx-2" href={socials["fb"]}>
