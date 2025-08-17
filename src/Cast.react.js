@@ -12,7 +12,7 @@ function Cast() {
   return (
     <>
       <Nav />
-      <Masthead buttonLabel="Meet the cast" btnColor="secondary" />
+      <Masthead buttonLabel="Meet the cast" btnColor="primary" />
       <section className="projects-section bg-light" id="about">
         <div className="container px-4 px-lg-5">
           <div className="row gx-0 mb-4 mb-lg-5 align-items-center">
