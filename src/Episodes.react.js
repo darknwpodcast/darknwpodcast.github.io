@@ -30,7 +30,11 @@ function Episodes() {
                 <div id="rss-feed-id" />
                 <hr />
                 <p className="text-black-50 mb-0">
-                  See all <a href="https://docs.google.com/document/d/1ADhFr18cn5tB_A-kej9Bj-ei6ODsaiKW9QRAPujqYok/edit?usp=sharing">SFX attributions</a>
+                  See all{' '}
+                  <a href="https://docs.google.com/document/d/1ADhFr18cn5tB_A-kej9Bj-ei6ODsaiKW9QRAPujqYok/edit?usp=sharing">
+                    SFX attributions{' '}
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
                 </p>
               </div>
             </div>
