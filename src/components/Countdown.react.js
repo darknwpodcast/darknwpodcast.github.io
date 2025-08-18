@@ -35,7 +35,7 @@ function Countdown() {
       }, 1000);
 
       return () => clearInterval(countdownInterval);
-  }, [timeRemaining]);
+  }, [timeRemaining, eventTime]);
 
     return (
         <section className="countdown-section text-center">
