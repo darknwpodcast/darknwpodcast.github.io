@@ -1,5 +1,6 @@
 import { HashLink } from "react-router-hash-link";
 import RssFeedFetcher from "../api/RssFeedFetcher.js";
+import Countdown from "./Countdown.react.js";
 
 function About() {
   const rss = new RssFeedFetcher();
@@ -43,6 +44,7 @@ Dark Northwest is an audio drama horror podcast inspired by real supernatural ev
 Season 1 premieres September 5th on all your favorite podcast platforms.
                 </p>
               </div>
+              <Countdown />
               <div className="text-center">
                  <div className="mx-2 my-3">
                   <HashLink className="btn btn-primary" to="/episodes#page-top">

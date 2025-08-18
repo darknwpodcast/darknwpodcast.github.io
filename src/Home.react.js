@@ -1,6 +1,5 @@
 import "./App.css";
 import About from "./components/About.react.js";
-import Countdown from "./components/Countdown.react.js";
 import Nav from "./components/Nav.react.js";
 import Masthead from "./components/Masthead.react.js";
 import Platforms from "./components/Platforms.react.js";
@@ -18,7 +17,6 @@ function Home() {
       <Masthead buttonLabel="Learn more" btnColor="primary" />
       <Platforms />
       <Socials />
-      <Countdown />
       <About />
       <Signup />
       <Socials />

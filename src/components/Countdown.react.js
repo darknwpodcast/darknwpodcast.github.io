@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+const CURRENT_SEASON = 1;
 const EVENT_DATE = "Sep 5, 2025 07:00:00";
 
 function getCurrentTime() {
@@ -24,7 +25,7 @@ function Countdown() {
         if (difference <= 0) {
           difference = 0;
           clearInterval(countdownInterval);
-          setContent('We are live!');
+          setContent(`Season ${CURRENT_SEASON} is live!`);
           return null;
         }
 
@@ -36,26 +37,12 @@ function Countdown() {
       return () => clearInterval(countdownInterval);
   }, [timeRemaining]);
 
-    // let content = '';
-
-    //     const distance = countDownDate - now;
-
-
-    //     // // Display the result in the element with id="demo"
-    //     // document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-    //     // + minutes + "m " + seconds + "s ";
-    //     content = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-    //     // If the count down is finished, write some text
-    //     if (distance < 0) {
-    //         // document.getElementById("demo").innerHTML = "EXPIRED";
-    //         content = "LAUNCHED"
-    //     }
-
-
     return (
-        <section className="contact-section bg-black">
-            <h2 className="link-header text-white mb-4">{content}</h2>
+        <section className="countdown-section text-center">
+            <div className="row gx-4 gx-lg-5 justify-content-center">
+                <p className="countdown">{content}</p>
+                {timeRemaining > 0 ? <p>Until Season {CURRENT_SEASON} premiere</p> : null}
+            </div>
         </section>
     );
 }

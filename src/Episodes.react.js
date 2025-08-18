@@ -1,3 +1,4 @@
+import Countdown from "./components/Countdown.react";
 import Nav from "./components/Nav.react";
 import Masthead from "./components/Masthead.react";
 import Signup from "./components/Signup.react";
@@ -26,6 +27,7 @@ function Episodes() {
             </div>
             <div className="col-xl-4 col-lg-5">
               <div className="featured-text text-center text-lg-left">
+                <Countdown />
                 <h3>Episodes</h3>
                 <div id="rss-feed-id" />
                 <hr />

@@ -11099,6 +11099,17 @@ body {
   max-width: 20rem;
   font-size: 1rem;
 }
+.countdown {
+  font-family: "Rubik Wet Paint", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: 0rem;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
 @media (min-width: 768px) {
   .masthead h1, .masthead .h1 {
     font-size: 4rem;
@@ -11168,6 +11179,9 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   border: 0;
+}
+.countdown-section {
+  padding: 3rem 0;
 }
 
 .contact-section {
