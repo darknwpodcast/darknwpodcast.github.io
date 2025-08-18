@@ -43,7 +43,6 @@ function About() {
 Dark Northwest is an audio drama horror podcast inspired by real supernatural events in the Pacific Northwest.
 Season 1 premieres September 5th on all your favorite podcast platforms.
                 </p>
-              </div>
               <Countdown />
               <div className="text-center">
                  <div className="mx-2 my-3">
@@ -56,6 +55,7 @@ Season 1 premieres September 5th on all your favorite podcast platforms.
                     Meet the Cast
                   </HashLink>
                 </div>
+              </div>
               </div>
             </div>
           </div>
