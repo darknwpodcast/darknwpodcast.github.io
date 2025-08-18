@@ -13,7 +13,7 @@ function Signup() {
                     href="mailto:dark-nw-subscribers+subscribe@googlegroups.com"
                     className="btn btn-primary"
                   >
-                    Subscribe <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Subscribe <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
               </div>

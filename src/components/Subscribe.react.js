@@ -11,7 +11,7 @@ function Subscribe() {
                 <hr className="my-4 mx-auto" />
                 <div className="small text-black-50">
                   <a href="mailto:darknw+subscribe@googlegroups.com">
-                    Sign Up <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Sign Up <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
               </div>
@@ -25,7 +25,7 @@ function Subscribe() {
                 <hr className="my-4 mx-auto" />
                 <div className="small text-black-50">
                   <a href="https://groups.google.com/g/darknw/">
-                    View our newsletter via Google Groups <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    View our newsletter via Google Groups <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
               </div>
