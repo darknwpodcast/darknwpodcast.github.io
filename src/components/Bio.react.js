@@ -4,6 +4,7 @@ const castPhotos = require.context("../img", true);
 function Bio(props) {
   const member = props.bio;
   const photo = castPhotos(member.photo);
+  console.log(member.flavor);
 
   const content = (
     <>
@@ -15,16 +16,16 @@ function Bio(props) {
         <b>Roles:</b> {member.roles}
       </p>
       <p className="mb-0 text-white-50">
-        <b>Voice of:</b> {member.voiceOf}, various
+        <b>Voice of:</b> {member.voiceOf}, various others
       </p>
     </>
   );
 
-  if (member.flavor === "A") {
+  if (props.flavor === "A") {
     return (
       <div className="row gx-0 mb-5 mb-lg-0 justify-content-center">
         <div className="col-lg-6">
-          <img className="img-fluid" src={photo} alt={member.name} />
+          <img className="img-fluid img-bio" src={photo} alt={member.name} />
         </div>
         <div className="col-lg-6">
           <div className="bg-black text-center h-100 project">
