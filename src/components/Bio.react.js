@@ -15,7 +15,7 @@ function Bio(props) {
         <b>Roles:</b> {member.roles}
       </p>
       <p className="mb-0 text-white-50">
-        <b>Voice of:</b> {member.voiceOf}
+        <b>Voice of:</b> {member.voiceOf}, various
       </p>
     </>
   );
