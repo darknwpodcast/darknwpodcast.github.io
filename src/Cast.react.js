@@ -14,7 +14,7 @@ function Cast() {
     <>
       <Nav />
       <Masthead buttonLabel="Meet the cast" btnColor="primary" />
-      <section className="projects-section bg-light" id="about">
+      <section className="projects-section bg-light">
         <div className="container px-4 px-lg-5">
           <div className="row gx-0 mb-4 mb-lg-5 align-items-center">
             <div className="col-xl-8 col-lg-7">
@@ -26,8 +26,8 @@ function Cast() {
             </div>
             <div className="col-xl-4 col-lg-5">
               <div className="featured-text text-center text-lg-left">
-                <h3>Main Cast</h3>
-                <p className="text-black-50 mb-0">
+                <h3 id="about">Main Cast</h3>
+                <p className="text-black-50 mb-0" >
                   Meet the cast of Season 1. Coming Fall 2025.
                 </p>
               </div>
@@ -59,7 +59,6 @@ function Cast() {
                     <li>Starring:
                       <ul>
                         {Object.keys(ep.cast).map(c => {
-                          console.log(c);
                           return <li key={c}><b>{c}</b>: {ep.cast[c]}</li>;
                         })}
                       </ul>

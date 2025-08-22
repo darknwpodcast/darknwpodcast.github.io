@@ -15,7 +15,7 @@ function Episodes() {
     <>
       <Nav />
       <Masthead buttonLabel="See episodes" btnColor="secondary" />
-      <section className="projects-section bg-light" id="about">
+      <section className="projects-section bg-light">
         <div className="container px-4 px-lg-5">
           <div className="row gx-0 mb-4 mb-lg-5 align-items-center">
             <div className="col-xl-8 col-lg-7">
@@ -30,13 +30,13 @@ function Episodes() {
                 <Countdown />
               </div>
             </div>
-                <h3>Episodes</h3>
+                <h3 id="about">Episodes</h3>
                 <div id="rss-feed-id" />
                 <p className="text-black-50 mb-0">
                   See all{' '}
                   <a href="https://docs.google.com/document/d/1ADhFr18cn5tB_A-kej9Bj-ei6ODsaiKW9QRAPujqYok/edit?usp=sharing">
                     SFX attributions{' '}
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </p>
           </div>
