@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const CURRENT_SEASON = 1;
-const EVENT_DATE = "Sep 5, 2025 07:00:00";
+const EVENT_DATE = "Sep 5, 2025 07:00:00-07:00";
 
 function getCurrentTime() {
     return new Date().getTime();
