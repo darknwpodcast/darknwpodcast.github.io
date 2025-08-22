@@ -1,5 +1,7 @@
 import {HashLink} from 'react-router-hash-link';
 
+const EPISODE_PREVIEW_URL = "https://open.spotify.com/embed/episode/3NZDG4vn4rQkvPGZe1FjwA?utm_source=generator&t=0"; // S01 trailer
+
 function Masthead(props) {
   return (
     <header className="masthead">
@@ -11,13 +13,13 @@ function Masthead(props) {
               Season 1 premieres September 5th.
             </h2>
             <iframe title="spotify-trailer" data-testid="embed-iframe"
-            src="https://open.spotify.com/embed/show/76qB6wBKZL129MppCz8tZC?utm_source=generator"
-            width="90%"
-            height="auto"
-            frameBorder="0"
-            allowFullScreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"></iframe>
+              src={EPISODE_PREVIEW_URL}
+              width="90%"
+              height="auto"
+              frameBorder="0"
+              allowFullScreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
             <div className="mx-2">
               <HashLink className={`btn btn-${props.btnColor}`} to="#about">
                 {props.buttonLabel}
