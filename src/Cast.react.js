@@ -6,7 +6,8 @@ import Subscribe from "./components/Subscribe.react.js";
 import Support from "./components/Support.react.js";
 import Bio from "./components/Bio.react.js";
 
-const cast = require("./data/bios.json");
+const bios = require("./data/bios.json");
+const cast = require("./data/cast.json");
 
 function Cast() {
   return (
@@ -32,7 +33,7 @@ function Cast() {
               </div>
             </div>
           </div>
-          {cast.map((member, idx) => {
+          {bios.map((member, idx) => {
             return (
               <Bio
                 key={member.name}
@@ -41,6 +42,36 @@ function Cast() {
               />
             );
           })}
+        </div>
+      </section>
+      <section className="projects-section bg-light" id="full-cast">
+         <div className="container px-4 px-lg-5">
+          <h3>Full Cast</h3>
+          <div className="row gx-0 mb-4 mb-lg-5 align-items-center">
+            {cast.map(ep => {
+              return (
+                <div
+                  key={`S${ep.season}E${ep.episode}`}
+                  className="col-md-1 col-md-8"
+                >
+                  <h4>S{ep.season}E{ep.episode}</h4>
+                  <ul>
+                    <li>Starring:
+                      <ul>
+                        {Object.keys(ep.cast).map(c => {
+                          console.log(c);
+                          return <li key={c}><b>{c}</b>: {ep.cast[c]}</li>;
+                        })}
+                      </ul>
+                  </li>
+                  <li>Written by:{' '}{ep.writer}</li>
+                  <li>Directed by:{' '}{ep.director}</li>
+                  <li>Music by:{' '}{ep.composer}</li>
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
       <Signup />

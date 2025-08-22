@@ -1,0 +1,28 @@
+[
+  {
+    "season": "01",
+    "episode": "00",
+    "cast": {
+        "Narrator": "Alex Gardipe",
+        "Gene": "Zephyr Moon",
+        "Ranger": "Jonathan Baudour"
+    },
+    "writer": "Kairsten Fay",
+    "director": "Ron Leota",
+    "composer": "Aaron Edens"
+  },
+  {
+    "season": "01",
+    "episode": "01",
+    "cast": {
+        "Narrator": "Alex Gardipe",
+        "Andy": "Robbie Clifford",
+        "Hazel": "Kairsten Fay",
+        "Jake": "Ron Leota",
+        "Lilly": "Arden"
+    },
+    "writer": "Kairsten Fay",
+    "director": "Ron Leota",
+    "composer": "Aaron Edens"
+  }
+]
