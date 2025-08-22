@@ -28,9 +28,10 @@ function Episodes() {
             <div className="col-xl-4 col-lg-5">
               <div className="featured-text text-center text-lg-left">
                 <Countdown />
+              </div>
+            </div>
                 <h3>Episodes</h3>
                 <div id="rss-feed-id" />
-                <hr />
                 <p className="text-black-50 mb-0">
                   See all{' '}
                   <a href="https://docs.google.com/document/d/1ADhFr18cn5tB_A-kej9Bj-ei6ODsaiKW9QRAPujqYok/edit?usp=sharing">
@@ -38,8 +39,6 @@ function Episodes() {
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

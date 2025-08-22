@@ -76,6 +76,7 @@ class RssFeedFetcher {
                         </p>
                         <p>Published: ${this.formatDate(this.parseXMLString(itemElement, "pubDate"))}</p>
                         <p>Duration: ${this.parseXMLString(itemElement, "duration")}</p>
+                        <hr />
                     </div>
                     `;
             });
