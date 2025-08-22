@@ -8,6 +8,7 @@ function Bio(props) {
   const content = (
     <>
       <h4 className="text-white">{member.name}</h4>
+      <Socials socials={member.socials} showHeader={false} />
       <p className="mb-0 text-white-50">{member.blurb}</p>
       <br />
       <p className="mb-0 text-white-50">
@@ -16,7 +17,6 @@ function Bio(props) {
       <p className="mb-0 text-white-50">
         <b>Voice of:</b> {member.voiceOf}
       </p>
-        <Socials socials={member.socials} showHeader={false} />
     </>
   );
 

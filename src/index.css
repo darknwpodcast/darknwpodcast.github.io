@@ -11153,12 +11153,12 @@ body {
   }
 }
 .projects-section .project-text {
-  padding: 3rem;
+  padding: 2rem;
   font-size: 90%;
 }
 @media (min-width: 992px) {
   .projects-section .project-text {
-    padding: 5rem;
+    padding: 2rem;
   }
 }
 
@@ -11185,7 +11185,8 @@ body {
 }
 
 .contact-section {
-  padding-top: 4vh;
+  padding-top: 0vh;
+  padding-bottom: 2vh;
 }
 .contact-section .card {
   border: 0;
