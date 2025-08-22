@@ -20,7 +20,7 @@ function platforms(props) {
         ) : null}
         {platforms["kofi"] ? (
           <a className="mx-2" href={platforms["kofi"]}>
-            <i class="fa-solid fa-mug-saucer"></i>
+            <i className="fa-solid fa-mug-saucer"></i>
           </a>
         ) : null}
       </div>
