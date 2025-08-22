@@ -6,7 +6,7 @@ import Subscribe from "./components/Subscribe.react.js";
 import Support from "./components/Support.react.js";
 import Bio from "./components/Bio.react.js";
 
-const cast = require("./data/cast.json");
+const cast = require("./data/bios.json");
 
 function Cast() {
   return (
