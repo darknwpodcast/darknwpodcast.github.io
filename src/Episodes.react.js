@@ -34,7 +34,7 @@ function Episodes() {
                   </a>
                 </h4>
                 <h4>
-                  <a href="https://anchor.fm/s/10421aa84/podcast/rss" target="_blank">RSS feed{' '}
+                  <a href="https://anchor.fm/s/10421aa84/podcast/rss" target="_blank" rel="noreferrer">RSS feed{' '}
                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                   </h4>

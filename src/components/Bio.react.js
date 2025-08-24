@@ -4,7 +4,6 @@ const castPhotos = require.context("../img", true);
 function Bio(props) {
   const member = props.bio;
   const photo = castPhotos(member.photo);
-  console.log(member.flavor);
 
   const content = (
     <>
