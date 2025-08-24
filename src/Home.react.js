@@ -14,7 +14,7 @@ function Home() {
   return (
     <>
       <Nav />
-      <Masthead buttonLabel="Learn more" btnColor="primary" />
+      <Masthead buttonLabel="Learn more" />
       <Platforms />
       <Socials />
       <About />

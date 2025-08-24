@@ -11233,6 +11233,10 @@ body {
   padding: 5rem 0;
 }
 
+.call-to-action-buttons {
+  padding-bottom: 4rem;
+}
+
 #rss-feed-id {
   padding-top: 2vh;
 }

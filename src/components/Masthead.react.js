@@ -1,6 +1,7 @@
 import {HashLink} from 'react-router-hash-link';
 
 const EPISODE_PREVIEW_URL = "https://open.spotify.com/embed/episode/3NZDG4vn4rQkvPGZe1FjwA?utm_source=generator&t=0"; // S01 trailer
+const CREATORS_PLATFORM_URL = "https://creators.spotify.com/pod/profile/darknwpodcast";
 
 function Masthead(props) {
   return (
@@ -20,11 +21,18 @@ function Masthead(props) {
               allowFullScreen=""
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"></iframe>
-            <div className="mx-2">
-              <HashLink className={`btn btn-${props.btnColor}`} to="#about">
-                {props.buttonLabel}
-              </HashLink>
-             </div>
+              <div className="call-to-action-buttons">
+                <p>
+                  <HashLink className={`btn btn-primary`} to={CREATORS_PLATFORM_URL}>
+                    Listen Now
+                  </HashLink>
+                </p>
+                <p>
+                <HashLink className={`btn btn-secondary`} to="#about">
+                  {props.buttonLabel}
+                </HashLink>
+                </p>
+              </div>
           </div>
         </div>
       </div>
