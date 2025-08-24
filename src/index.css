@@ -2857,7 +2857,7 @@ textarea.form-control-lg {
   opacity: var(--bs-btn-disabled-opacity);
 }
 
-.btn-primary {
+.btn-secondary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #15be6d;
   --bs-btn-border-color: #15be6d;
@@ -2874,7 +2874,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #15be6d;
 }
 
-.btn-secondary {
+.btn-primary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #0400ff;
   --bs-btn-border-color: #0400ff;

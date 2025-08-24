@@ -47,7 +47,7 @@ Season 1 premieres September 5th on all your favorite podcast platforms.
               <div className="text-center">
                  <div className="mx-2 my-3">
                   <HashLink className="btn btn-primary" to="/episodes#page-top">
-                    Listen Now
+                    See Episodes
                   </HashLink>
                 </div>
                 <div className="mx-2 my-3">

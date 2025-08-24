@@ -11,7 +11,7 @@ function Signup() {
                 <div className="col-md-12">
                   <a
                     href="mailto:dark-nw-subscribers+subscribe@googlegroups.com"
-                    className="btn btn-primary"
+                    className="btn btn-secondary"
                   >
                     Subscribe <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>

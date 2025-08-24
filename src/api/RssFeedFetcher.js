@@ -67,7 +67,7 @@ class RssFeedFetcher {
                             </a>
                         </h4>
                         <a href=${link}>
-                            <button class="btn btn-primary">
+                            <button class="btn btn-secondary">
                                 Listen <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </button>
                         </a>
