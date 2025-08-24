@@ -15,12 +15,16 @@ function Home() {
     <>
       <Nav />
       <Masthead buttonLabel="Learn more" />
-      <Platforms />
-      <Socials />
+      <div className="contact-section-container bg-black">
+        <Platforms />
+        <Socials />
+      </div>
       <About />
       <Signup />
-      <Socials />
-      <Support />
+      <div className="contact-section-container bg-black">
+        <Socials />
+        <Support />
+      </div>
       <Subscribe />
     </>
   );

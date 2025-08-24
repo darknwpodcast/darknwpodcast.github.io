@@ -40,7 +40,7 @@ function Bio(props) {
     );
   } else {
     return (
-      <div className="row gx-0 justify-content-center" id="cast">
+      <div className="row gx-0 justify-content-center">
         <div className="col-lg-6">
           <img className="img-fluid img-bio" src={photo} alt={member.name} />
         </div>

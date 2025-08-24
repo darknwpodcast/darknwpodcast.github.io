@@ -11133,11 +11133,8 @@ body {
 }
 
 .about-section {
-  padding-top: 2rem 0;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
-}
-.about-section p {
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
 }
 
 .projects-section {
@@ -11184,9 +11181,14 @@ body {
   padding: 3rem 0;
 }
 
+.contact-section-container {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .contact-section {
-  padding-top: 0vh;
-  padding-bottom: 0vh;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .contact-section .card {
   border: 0;
@@ -11231,10 +11233,6 @@ body {
 
 .footer {
   padding: 5rem 0;
-}
-
-.call-to-action-buttons {
-  padding-bottom: 4rem;
 }
 
 #rss-feed-id {

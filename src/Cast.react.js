@@ -74,8 +74,10 @@ function Cast() {
         </div>
       </section>
       <Signup />
-      <Socials />
-      <Support />
+      <div className="contact-section-container bg-black">
+        <Socials />
+        <Support />
+      </div>
       <Subscribe />
     </>
   );
