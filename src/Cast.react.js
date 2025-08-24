@@ -13,7 +13,7 @@ function Cast() {
   return (
     <>
       <Nav />
-      <Masthead buttonLabel="Meet the cast" btnColor="primary" />
+      <Masthead buttonLabel="Meet the cast & crew" btnColor="primary" />
       <section className="projects-section bg-light">
         <div className="container px-4 px-lg-5">
           <div className="row gx-0 mb-4 mb-lg-5 align-items-center">
@@ -26,9 +26,9 @@ function Cast() {
             </div>
             <div className="col-xl-4 col-lg-5">
               <div className="featured-text text-center text-lg-left">
-                <h3 id="about">Main Cast</h3>
+                <h3 id="about">Main Cast and Crew</h3>
                 <p className="text-black-50 mb-0" >
-                  Meet the cast of Season 1. Coming Fall 2025.
+                  Meet the cast and crew of Season 1. Coming Fall 2025.
                 </p>
               </div>
             </div>
@@ -46,7 +46,7 @@ function Cast() {
       </section>
       <section className="projects-section bg-light" id="full-cast">
          <div className="container px-4 px-lg-5">
-          <h3>Full Cast</h3>
+          <h3>Full Cast and Crew</h3>
           <div className="row gx-0 mb-4 mb-lg-5 align-items-center">
             {cast.map(ep => {
               return (

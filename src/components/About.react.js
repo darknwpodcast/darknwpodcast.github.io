@@ -52,7 +52,7 @@ Season 1 premieres September 5th on all your favorite podcast platforms.
                 </div>
                 <div className="mx-2 my-3">
                   <HashLink className="btn btn-secondary" to="/cast#page-top">
-                    Meet the Cast
+                    Meet the Cast & Crew
                   </HashLink>
                 </div>
               </div>
