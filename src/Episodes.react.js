@@ -28,6 +28,8 @@ function Episodes() {
             <div className="col-xl-4 col-lg-5">
               <div className="featured-text text-center text-lg-left">
                 <Countdown />
+                <h4><a href="https://creators.spotify.com/pod/profile/darknwpodcast">Platform hosting site</a></h4>
+                <h4><a href="https://anchor.fm/s/10421aa84/podcast/rss" target="_blank">RSS feed</a></h4>
               </div>
             </div>
                 <h3 id="about">Episodes</h3>

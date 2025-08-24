@@ -6,6 +6,7 @@ function platforms(props) {
       ap: "https://podcasts.apple.com/us/podcast/dark-northwest/id1828228648",
       am: "https://music.amazon.com/podcasts/e0389d9d-becd-45bd-b578-cee7c2f17c21/dark-northwest",
       yt: "https://www.youtube.com/@DarkNWPodcast",
+      rss: "https://anchor.fm/s/10421aa84/podcast/rss",
     };
   } else {
     platforms = props.platforms;
@@ -33,6 +34,11 @@ function platforms(props) {
         {platforms["am"] ? (
           <a className="mx-2" href={platforms["am"]}>
               <i className="fa-brands fa-amazon"></i>
+          </a>
+        ) : null}
+        {platforms["rss"] ? (
+          <a className="mx-2" href={platforms["rss"]}>
+              <i className="fa-solid fa-rss"></i>
           </a>
         ) : null}
       </div>
