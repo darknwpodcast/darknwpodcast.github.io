@@ -1,3 +1,5 @@
+import {GOOGLE_GROUPS_MAILTO} from "../Constants.js";
+
 function Signup() {
   return (
     <section className="signup-section" id="signup">
@@ -10,7 +12,7 @@ function Signup() {
               <div className="row input-group-newsletter">
                 <div className="col-md-12">
                   <a
-                    href="mailto:dark-nw-subscribers+subscribe@googlegroups.com"
+                    href={GOOGLE_GROUPS_MAILTO}
                     className="btn btn-secondary"
                   >
                     Subscribe <i className="fa-solid fa-arrow-up-right-from-square"></i>

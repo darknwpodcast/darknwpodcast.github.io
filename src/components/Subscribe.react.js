@@ -1,3 +1,5 @@
+import {GOOGLE_GROUPS_MAILTO} from "../Constants.js";
+
 function Subscribe() {
   return (
     <section className="contact-section bg-black">
@@ -10,7 +12,7 @@ function Subscribe() {
                 <h4 className="text-uppercase m-0">Newsletter</h4>
                 <hr className="my-4 mx-auto" />
                 <div className="small text-black-50">
-                  <a href="mailto:darknw+subscribe@googlegroups.com">
+                  <a href={GOOGLE_GROUPS_MAILTO}>
                     Sign Up <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
