@@ -2,7 +2,7 @@ import {GOOGLE_GROUPS_MAILTO} from "../Constants.js";
 
 function Subscribe() {
   return (
-    <section className="contact-section bg-black">
+    <section id="contact" className="contact-section bg-black">
       <div className="container px-3 px-lg-5">
         <div className="row gx-4 gx-lg-5">
           <div className="col-md-4 mb-3 mb-md-0">

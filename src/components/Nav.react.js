@@ -40,7 +40,7 @@ function Nav() {
               </HashLink>
             </li>
             <li className="nav-item">
-              <HashLink className="nav-link" to="/#signup">
+              <HashLink className="nav-link" to="/#contact">
                 Contact
               </HashLink>
             </li>
