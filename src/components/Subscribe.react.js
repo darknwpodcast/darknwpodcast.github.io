@@ -8,10 +8,25 @@ function Subscribe() {
           <div className="col-md-4 mb-3 mb-md-0">
             <div className="card py-4 h-100">
               <div className="card-body text-center">
+                <i className="fas fa-envelope text-primary mb-2"></i>
+                <h4 className="text-uppercase m-0">Email</h4>
+                <hr className="my-4 mx-auto" />
+                <div className="small text-black-50">
+                  To sponsor ads on the show, contact us at{' '}<a href="mailto:darknorthwestpodcast@gmail.com">
+                    darknorthwestpodcast@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4 mb-3 mb-md-0">
+            <div className="card py-4 h-100">
+              <div className="card-body text-center">
                 <i className="fas fa-bell text-primary mb-2"></i>
                 <h4 className="text-uppercase m-0">Newsletter</h4>
                 <hr className="my-4 mx-auto" />
                 <div className="small text-black-50">
+                  Stay tuned into the latest news and updates.{' '}
                   <a href={GOOGLE_GROUPS_MAILTO}>
                     Sign Up <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
@@ -23,25 +38,12 @@ function Subscribe() {
             <div className="card py-4 h-100">
               <div className="card-body text-center">
                 <i className="fas fa-brands fa-google text-primary mb-2"></i>
-                <h4 className="text-uppercase m-0">Google Groups</h4>
+                <h4 className="text-uppercase m-0">DarkNW Google Group</h4>
                 <hr className="my-4 mx-auto" />
                 <div className="small text-black-50">
+                  View the newsletter archive via{' '}
                   <a href="https://groups.google.com/g/darknw/">
-                    View our newsletter via Google Groups <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 mb-3 mb-md-0">
-            <div className="card py-4 h-100">
-              <div className="card-body text-center">
-                <i className="fas fa-envelope text-primary mb-2"></i>
-                <h4 className="text-uppercase m-0">Email</h4>
-                <hr className="my-4 mx-auto" />
-                <div className="small text-black-50">
-                  <a href="mailto:darknorthwestpodcast@gmail.com">
-                    darknorthwestpodcast@gmail.com
+                    Google Groups <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
               </div>
