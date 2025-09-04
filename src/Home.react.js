@@ -5,7 +5,7 @@ import Masthead from "./components/Masthead.react.js";
 import Platforms from "./components/Platforms.react.js";
 import Socials from "./components/Socials.react.js";
 import Signup from "./components/Signup.react.js";
-import Subscribe from "./components/Subscribe.react.js";
+import Contact from "./components/Contact.react.js";
 import Support from "./components/Support.react.js";
 
 import * as React from "react";
@@ -25,7 +25,7 @@ function Home() {
         <Socials />
         <Support />
       </div>
-      <Subscribe />
+      <Contact />
     </>
   );
 }

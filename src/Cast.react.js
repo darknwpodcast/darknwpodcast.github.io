@@ -2,7 +2,7 @@ import Nav from "./components/Nav.react";
 import Masthead from "./components/Masthead.react";
 import Signup from "./components/Signup.react";
 import Socials from "./components/Socials.react.js";
-import Subscribe from "./components/Subscribe.react.js";
+import Contact from "./components/Contact.react.js";
 import Support from "./components/Support.react.js";
 import Bio from "./components/Bio.react.js";
 
@@ -78,7 +78,7 @@ function Cast() {
         <Socials />
         <Support />
       </div>
-      <Subscribe />
+      <Contact />
     </>
   );
 }
