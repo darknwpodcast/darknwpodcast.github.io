@@ -11075,6 +11075,7 @@ body {
 
 .masthead {
   position: relative;
+  padding-top: 10vh;
   width: 100%;
   height: 98vh;
   min-height: 35rem;
@@ -11090,8 +11091,10 @@ body {
   font-size: 4rem;
   line-height: 4rem;
   letter-spacing: 0rem;
+  text-shadow: 2px 2px 5px black;
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: white;
+  opacity: 0.9;
   -webkit-background-clip: text;
           background-clip: text;
 }
