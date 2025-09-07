@@ -11,7 +11,7 @@ function Masthead(props) {
           <div className="text-center">
             <h1 className="mx-auto my-0">Dark Northwest Podcast</h1>
             <h2 className="text-white-50 mx-auto mt-2 mb-5">
-              Season 1 premieres September 5th.
+              Season 1 now streaming on all podcast platform providers.
             </h2>
             <iframe title="spotify-trailer" data-testid="embed-iframe"
               src={EPISODE_PREVIEW_URL}

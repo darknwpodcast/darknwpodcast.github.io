@@ -40,8 +40,7 @@ function About() {
                 <h3>Season 1</h3>
                 <p className="text-black-50 mb-0">
                   Follow a group of young friends investigating a tragedy at the haunted Old Cascade Tunnel in Wellington, WA—the site of one of the worst train disasters in U.S. history.
-Dark Northwest is an audio drama horror podcast inspired by real supernatural events in the Pacific Northwest.
-Season 1 premieres September 5th on all your favorite podcast platforms.
+Dark Northwest is an audio drama horror podcast inspired by real supernatural events in the Pacific Northwest. Now streaming on all your favorite podcast platforms.
                 </p>
               <Countdown />
               <div className="text-center">
