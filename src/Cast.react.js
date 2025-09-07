@@ -7,7 +7,6 @@ import Support from "./components/Support.react.js";
 import Bio from "./components/Bio.react.js";
 
 const bios = require("./data/bios.json");
-const cast = require("./data/cast.json");
 const IMDB_URL = 'https://www.imdb.com/title/tt37996049/fullcredits/';
 
 function Cast() {
