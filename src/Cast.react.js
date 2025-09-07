@@ -30,7 +30,7 @@ function Cast() {
                 <p className="text-black-50 mb-0" >
                   Meet the cast and crew of Season 1.
                   See full cast and crew credits on {' '}
-                  <a href={IMDB_URL} target="_blank">
+                  <a href={IMDB_URL} target="_blank" rel="noreferrer">
                     IMDb{' '}
                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
