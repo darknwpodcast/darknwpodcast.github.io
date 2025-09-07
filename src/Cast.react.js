@@ -8,6 +8,7 @@ import Bio from "./components/Bio.react.js";
 
 const bios = require("./data/bios.json");
 const cast = require("./data/cast.json");
+const IMDB_URL = 'https://www.imdb.com/title/tt37996049/fullcredits/';
 
 function Cast() {
   return (
@@ -28,7 +29,12 @@ function Cast() {
               <div className="featured-text text-center text-lg-left">
                 <h3 id="about">Main Cast and Crew</h3>
                 <p className="text-black-50 mb-0" >
-                  Meet the cast and crew of Season 1. Coming Fall 2025.
+                  Meet the cast and crew of Season 1.
+                  See full cast and crew credits on {' '}
+                  <a href={IMDB_URL} target="_blank">
+                    IMDb{' '}
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
                 </p>
               </div>
             </div>
@@ -46,31 +52,6 @@ function Cast() {
       </section>
       <section className="projects-section bg-light" id="full-cast">
          <div className="container px-4 px-lg-5">
-          <h3>Full Cast and Crew</h3>
-          <div className="row gx-0 mb-4 mb-lg-5 align-items-center">
-            {cast.map(ep => {
-              return (
-                <div
-                  key={`S${ep.season}E${ep.episode}`}
-                  className="col-md-1 col-md-8"
-                >
-                  <h4>S{ep.season}E{ep.episode}</h4>
-                  <ul>
-                    <li>Starring:
-                      <ul>
-                        {Object.keys(ep.cast).map(c => {
-                          return <li key={c}><b>{c}</b>: {ep.cast[c]}</li>;
-                        })}
-                      </ul>
-                  </li>
-                  <li>Written by:{' '}{ep.writer}</li>
-                  <li>Directed by:{' '}{ep.director}</li>
-                  <li>Music by:{' '}{ep.composer}</li>
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </section>
       <Signup />

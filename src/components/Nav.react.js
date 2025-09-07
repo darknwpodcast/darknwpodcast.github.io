@@ -36,7 +36,7 @@ function Nav() {
             </li>
             <li className="nav-item">
               <HashLink className="nav-link" to="/cast#page-top">
-                Cast
+                Cast & Crew
               </HashLink>
             </li>
             <li className="nav-item">
