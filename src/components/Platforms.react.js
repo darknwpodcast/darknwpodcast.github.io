@@ -5,7 +5,7 @@ function platforms(props) {
       sp: "https://open.spotify.com/show/76qB6wBKZL129MppCz8tZC",
       ap: "https://podcasts.apple.com/us/podcast/dark-northwest/id1828228648",
       am: "https://music.amazon.com/podcasts/e0389d9d-becd-45bd-b578-cee7c2f17c21/dark-northwest",
-      yt: "https://www.youtube.com/@DarkNWPodcast",
+      yt: "https://www.youtube.com/playlist?list=PLy0todw8zSgwdzOQ8rRPKUqG7lpDR8-34",
       rss: "https://anchor.fm/s/10421aa84/podcast/rss",
     };
   } else {
