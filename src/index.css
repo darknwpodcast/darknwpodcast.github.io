@@ -11184,6 +11184,7 @@ body {
 .contact-section-container {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  margin: -1px;
 }
 
 .contact-section {
