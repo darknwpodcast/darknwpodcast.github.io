@@ -6,7 +6,8 @@
     "roles": "Co-Creator, Director, Audio Engineer, Editor, Voice Actor",
     "voiceOf": "Jake",
     "socials": {
-      "fb": "https://facebook.com/leotaroleplaying"
+      "fb": "https://facebook.com/leotaroleplaying",
+      "imdb": "https://www.imdb.com/name/nm17616458/"
     }
   },
   {
@@ -17,7 +18,8 @@
     "voiceOf": "Hazel",
     "socials": {
       "medium": "https://kairsten-fay.medium.com",
-      "threads": "https://www.threads.com/@kairstenfay"
+      "threads": "https://www.threads.com/@kairstenfay",
+      "imdb": "https://www.imdb.com/name/nm17616459/"
     }
   },
   {
@@ -27,7 +29,8 @@
     "roles": "Voice Actor",
     "voiceOf": "Dark Northwest (Narrator)",
     "socials": {
-      "website": "https://alexponential.wixsite.com/voiceactor"
+      "website": "https://alexponential.wixsite.com/voiceactor",
+      "imdb": "https://www.imdb.com/name/nm5188773/"
     }
   },
   {
@@ -40,7 +43,8 @@
       "ig": "https://www.instagram.com/cyrinnic/",
       "threads": "https://www.threads.com/@cyrinnic",
       "tiktok": "https://www.tiktok.com/@robclifford",
-      "website": "http://www.bigrobotart.com"
+      "website": "http://www.bigrobotart.com",
+      "imdb": "https://www.imdb.com/name/nm17616462/"
     }
   },
   {
@@ -50,7 +54,8 @@
     "voiceOf": "Lilly",
     "socials": {
       "ig": "https://www.instagram.com/ardendoescosplay",
-      "tiktok": "https://www.tiktok.com/@ardendoescosplay"
+      "tiktok": "https://www.tiktok.com/@ardendoescosplay",
+      "imdb": "https://www.imdb.com/name/nm17616457/"
     }
   },
   {
@@ -60,7 +65,8 @@
     "roles": "Voice Actor",
     "voiceOf": "Tara",
     "socials": {
-      "email": "mailto:Cass.schwartz@gmail.com"
+      "email": "mailto:Cass.schwartz@gmail.com",
+      "imdb": "https://www.imdb.com/name/nm17616463/"
     }
   },
   {
@@ -71,7 +77,27 @@
     "voiceOf": "Gene the Skier",
     "socials": {
       "tiktok": "https://www.tiktok.com/@hwymancharon?_t=ZT-8ycuCohkx0X&_r=1",
-      "ig": "https://www.instagram.com/spacedoutzephyr?igsh=MTNpaG96cHFnN3k3cg==&utm_source=qr"
+      "ig": "https://www.instagram.com/spacedoutzephyr?igsh=MTNpaG96cHFnN3k3cg==&utm_source=qr",
+      "imdb": "https://www.imdb.com/name/nm17616460/"
+    }
+  },
+  {
+    "name": "Jonathan Baudour",
+    "photo": "./demo-image-02.jpg",
+    "blurb": "",
+    "roles": "Voice Actor",
+    "voiceOf": "Ranger Hill",
+    "socials": {
+      "imdb": "https://www.imdb.com/name/nm17616461/"
+    }
+  },
+  {
+    "name": "Aaron Edens",
+    "photo": "./demo-image-01.jpg",
+    "blurb": "",
+    "roles": "Composer, Mastering Engineer",
+    "socials": {
+      "imdb": "https://www.imdb.com/name/nm17616464/"
     }
   }
 ]

@@ -9,13 +9,13 @@ function Bio(props) {
     <>
       <h4 className="text-white">{member.name}</h4>
       <Socials socials={member.socials} showHeader={false} />
-      <p className="mb-0 text-white-50">{member.blurb}</p>
+      {member.blurb != null ? <p className="mb-0 text-white-50">{member.blurb}</p>: null}
       <br />
       <p className="mb-0 text-white-50">
         <b>Roles:</b> {member.roles}
       </p>
       <p className="mb-0 text-white-50">
-        <b>Voice of:</b> {member.voiceOf}, various others
+        {member.voiceOf != null ? <><b>Voice of:</b> {member.voiceOf}, various others </>: null}
       </p>
     </>
   );
