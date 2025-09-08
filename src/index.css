@@ -11113,6 +11113,12 @@ body {
           background-clip: text;
 }
 
+@media (max-width: 700px) {
+  .masthead h1, .masthead .h1 {
+    padding-top: 10vh !important;
+  }
+}
+
 @media (min-width: 768px) {
   .masthead h1, .masthead .h1 {
     font-size: 4rem;
