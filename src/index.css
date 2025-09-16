@@ -2862,7 +2862,7 @@ textarea.form-control-lg {
   --bs-btn-bg: #15be6d;
   --bs-btn-border-color: #15be6d;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #558985;
+  --bs-btn-hover-bg: #ba2201;
   --bs-btn-hover-border-color: #50817e;
   --bs-btn-focus-shadow-rgb: 123, 175, 172;
   --bs-btn-active-color: #fff;
@@ -2879,7 +2879,7 @@ textarea.form-control-lg {
   --bs-btn-bg: #0400ff;
   --bs-btn-border-color: #0400ff;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #635589;
+  --bs-btn-hover-bg: #ba2201;
   --bs-btn-hover-border-color: #5d5081;
   --bs-btn-focus-shadow-rgb: 137, 123, 175;
   --bs-btn-active-color: #fff;
@@ -11077,7 +11077,6 @@ body {
   position: relative;
   padding-top: 10vh;
   width: 100%;
-  height: 98vh;
   min-height: 35rem;
   padding: 15rem 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../public/bg-masthead.jpg");
