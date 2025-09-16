@@ -20,7 +20,7 @@ function Bio(props) {
       <br />
       <p className="mb-0 text-white-50">
         For full credits, please visit{' '}
-        <a class="text-white-50" href={member.imdb} target="_blank">IMDb
+        <a class="text-white-50" href={member.imdb} target="_blank" rel="noreferrer">IMDb
           <i className="fa-solid fa-arrow-up-right-from-square"></i>
         </a>
       </p>
