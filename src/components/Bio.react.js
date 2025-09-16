@@ -17,6 +17,12 @@ function Bio(props) {
       <p className="mb-0 text-white-50">
         {member.voiceOf != null ? <><b>Voice of:</b> {member.voiceOf}, various others </>: null}
       </p>
+      <p className="mb-0 text-white-50">
+        For full credits, please visit{' '}
+        <a href={member.imdb} target="_blank">IMDb
+          <i className="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </p>
     </>
   );
 
