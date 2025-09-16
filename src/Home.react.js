@@ -18,6 +18,7 @@ function Home() {
       <div className="contact-section-container bg-black">
         <Platforms />
         <Socials />
+        <Support />
       </div>
       <About />
       <Signup />
