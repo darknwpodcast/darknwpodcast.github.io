@@ -24,7 +24,7 @@
   },
   {
     "name": "E. Alex Gardipe",
-    "photo": "./demo-image-02.jpg",
+    "photo": "./Alex.jpg",
     "blurb": "E. Alex Gardipe is a Seattle based actor and comedian with credits in both independent films and videogames. A lifelong gamer and LARPer, this giant of a man is literally one of the biggest nerds you'll ever meet!",
     "roles": "Voice Actor",
     "voiceOf": "Dark Northwest (Narrator)",
@@ -95,7 +95,7 @@
     "name": "Aaron Edens",
     "photo": "./demo-image-01.jpg",
     "blurb": "",
-    "roles": "Composer, Mastering Engineer",
+    "roles": "Composer, Musician, Mastering Engineer",
     "imdb": "https://www.imdb.com/name/nm17616464/",
     "socials": {
     }
