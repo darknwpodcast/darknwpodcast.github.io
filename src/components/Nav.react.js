@@ -7,7 +7,7 @@ function Nav() {
       id="mainNav"
     >
       <div className="container px-4 px-lg-5">
-        <HashLink className="navbar-brand" to="#page-top">
+        <HashLink className="navbar-brand" to="/#page-top">
           Dark Northwest
         </HashLink>
         <button
