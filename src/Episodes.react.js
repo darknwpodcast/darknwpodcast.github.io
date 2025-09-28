@@ -18,26 +18,27 @@ function Episodes() {
       <section className="projects-section bg-light">
         <div className="container px-4 px-lg-5">
           <div className="row gx-0 mb-4 mb-lg-5 align-items-center">
-            <div className="col-xl-8 col-lg-7">
+            <div className="col-md-6">
               <img
                 className="img-fluid mb-3 mb-lg-0"
                 src="./favicon.svg"
-                alt="..."
+                alt="Dark Northwest logo"
+                width="80%"
               />
             </div>
-            <div className="col-xl-4 col-lg-5">
+            <div className="col-md-6">
               <div className="featured-text text-center text-lg-left">
                 <Countdown />
-                <h4>
+                <p>
                   <a href="https://creators.spotify.com/pod/profile/darknwpodcast">Platform hosting site{' '}
                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
-                </h4>
-                <h4>
+                </p>
+                <p>
                   <a href="https://anchor.fm/s/10421aa84/podcast/rss" target="_blank" rel="noreferrer">RSS feed{' '}
                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
-                  </h4>
+                </p>
               </div>
             </div>
                 <h3 id="about">Episodes</h3>

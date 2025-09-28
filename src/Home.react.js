@@ -1,5 +1,5 @@
 import "./App.css";
-import About from "./components/About.react.js";
+import LatestRelease from "./components/LatestRelease.react.js";
 import Nav from "./components/Nav.react.js";
 import Masthead from "./components/Masthead.react.js";
 import Platforms from "./components/Platforms.react.js";
@@ -20,7 +20,7 @@ function Home() {
         <Socials />
         <Support />
       </div>
-      <About />
+      <LatestRelease />
       <Signup />
       <div className="contact-section-container bg-black">
         <Socials />

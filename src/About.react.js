@@ -1,6 +1,12 @@
 import { HashLink } from "react-router-hash-link";
-import RssFeedFetcher from "../api/RssFeedFetcher.js";
-import Countdown from "./Countdown.react.js";
+import Nav from "./components/Nav.react";
+import Masthead from "./components/Masthead.react";
+import Countdown from "./components/Countdown.react.js";
+import Signup from "./components/Signup.react";
+import Socials from "./components/Socials.react.js";
+import Contact from "./components/Contact.react.js";
+import Support from "./components/Support.react.js";
+import RssFeedFetcher from "./api/RssFeedFetcher.js";
 
 function About() {
   const rss = new RssFeedFetcher();
@@ -8,7 +14,9 @@ function About() {
 
   return (
     <>
-      <section className="about-section text-center" id="about">
+      <Nav />
+      <Masthead buttonLabel="About Us" />
+       <section className="about-section text-center" id="about">
         <div className="container px-4 px-lg-5">
           <div className="row gx-4 gx-lg-5 justify-content-center">
             <div className="col-lg-8">
@@ -28,14 +36,15 @@ function About() {
       <section className="projects-section bg-light" id="projects">
         <div className="container px-4 px-lg-5">
           <div className="row gx-0 mb-4 mb-lg-5 align-items-center">
-            <div className="col-xl-8 col-lg-7">
+            <div className="col-md-6">
               <img
                 className="img-fluid mb-3 mb-lg-0"
                 src="./favicon.svg"
-                alt="..."
+                alt="Dark Northwest logo"
+                width="80%"
               />
             </div>
-            <div className="col-xl-4 col-lg-5">
+            <div className="col-md-6">
               <div className="featured-text text-center text-lg-left">
                 <h3>Season 1</h3>
                 <p className="text-black-50 mb-0">
@@ -60,6 +69,12 @@ Dark Northwest is an audio drama horror podcast inspired by real supernatural ev
           </div>
         </div>
       </section>
+      <Signup />
+      <div className="contact-section-container bg-black">
+        <Socials />
+        <Support />
+      </div>
+      <Contact />
     </>
   );
 }

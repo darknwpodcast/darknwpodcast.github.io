@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Home from "./Home.react";
+import About from "./About.react";
 import Cast from "./Cast.react";
 import Episodes from "./Episodes.react";
 import reportWebVitals from "./reportWebVitals";
@@ -12,6 +13,10 @@ const router = createHashRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/about",
+    element: <About />,
   },
   {
     path: "/cast",

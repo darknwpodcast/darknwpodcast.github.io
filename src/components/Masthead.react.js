@@ -1,6 +1,6 @@
 import {HashLink} from 'react-router-hash-link';
 
-const EPISODE_PREVIEW_URL = "https://open.spotify.com/embed/episode/3NZDG4vn4rQkvPGZe1FjwA?utm_source=generator&t=0"; // S01 trailer
+const EPISODE_PREVIEW_URL = "https://open.spotify.com/embed/episode/3NZDG4vn4rQkvPGZe1FjwA?utm_source=generator&t=0&theme=0"; // S01 trailer
 const CREATORS_PLATFORM_URL = "https://creators.spotify.com/pod/profile/darknwpodcast";
 
 function Masthead(props) {
@@ -13,18 +13,16 @@ function Masthead(props) {
             <h2 className="text-white-50 mx-auto mt-2 mb-5">
               Season 1 now streaming on all podcast platform providers.
             </h2>
-            <iframe title="spotify-trailer" data-testid="embed-iframe"
+            <iframe id="trailer" title="spotify-trailer" data-testid="embed-iframe"
               src={EPISODE_PREVIEW_URL}
-              width="90%"
-              height="auto"
               frameBorder="0"
               allowFullScreen=""
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"></iframe>
               <div className="call-to-action-buttons">
                 <p>
                   <HashLink className={`btn btn-primary`} to={CREATORS_PLATFORM_URL}>
-                    Listen Now
+                    Listen Now <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </HashLink>
                 </p>
                 <p>

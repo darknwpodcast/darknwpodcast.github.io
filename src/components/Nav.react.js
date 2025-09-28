@@ -30,6 +30,11 @@ function Nav() {
               </HashLink>
             </li>
             <li className="nav-item">
+              <HashLink className="nav-link" to="/about#page-top">
+                About
+              </HashLink>
+            </li>
+            <li className="nav-item">
               <HashLink className="nav-link" to="/episodes#page-top">
                 Episodes
               </HashLink>

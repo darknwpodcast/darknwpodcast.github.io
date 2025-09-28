@@ -474,7 +474,7 @@ output {
   display: inline-block;
 }
 
-iframe {
+#trailer {
   border: 0;
   margin: 0 auto;
   width: 96%;
@@ -8258,13 +8258,17 @@ textarea.form-control-lg {
 
 .text-white-50 {
   --bs-text-opacity: 1;
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
 }
+
 
 .text-white-50 a:hover {
   color: #ba2201 !important;
 }
 
+.text-white-50 .btn:hover {
+  color: #fff !important;
+}
 .text-reset {
   --bs-text-opacity: 1;
   color: inherit !important;
@@ -11083,7 +11087,7 @@ body {
   padding-top: 3vh;
   width: 100%;
   min-height: 35rem;
-  padding: 15rem 0;
+  padding: 5rem 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../public/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -11167,8 +11171,11 @@ body {
 .projects-section {
   padding: 2rem 0;
 }
-.projects-section .featured-text {
-  padding: 2rem;
+
+@media (max-width: 700px) {
+  .featured-text {
+    padding: 0;
+  }
 }
 @media (min-width: 992px) {
   .projects-section .featured-text {
@@ -11269,4 +11276,24 @@ body {
 
 hr {
   margin: 3vh;
+}
+
+iframe {
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+
+@media (min-width: 1000px) {
+iframe {
+  width: 80%;
+  height: 1000px;
+  }
+}
+
+@media (max-width: 999px) {
+iframe {
+  width: 80%;
+  height: 950px;
+  }
 }

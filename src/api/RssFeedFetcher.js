@@ -58,6 +58,7 @@ class RssFeedFetcher {
             let html = ``;
             items.forEach(itemElement => {
                 const link = this.parseXMLString(itemElement, "link");
+                console.log(link);
                 html += `
                     <div>
                         <h4>
