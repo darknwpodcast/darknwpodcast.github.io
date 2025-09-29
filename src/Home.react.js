@@ -12,7 +12,7 @@ function Home() {
   return (
     <>
       <Nav />
-      <Masthead buttonLabel="Learn more" />
+      <Masthead tab="home" buttonLabel="Learn more" />
       <AllTheCircleButtons />
       <LatestRelease />
       <Signup />

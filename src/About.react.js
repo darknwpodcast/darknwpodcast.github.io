@@ -14,7 +14,7 @@ function About() {
   return (
     <>
       <Nav />
-      <Masthead buttonLabel="About Us" />
+      <Masthead tab="about" buttonLabel="About Us" />
        <section className="about-section text-center" id="about">
         <div className="container px-4 px-lg-5">
           <div className="row gx-4 gx-lg-5 justify-content-center">
@@ -49,6 +49,10 @@ function About() {
                 <p className="text-black-50 mb-0">
                   Follow a group of young friends investigating a tragedy at the haunted Old Cascade Tunnel in Wellington, WA—the site of one of the worst train disasters in U.S. history.
 Dark Northwest is an audio drama horror podcast inspired by real supernatural events in the Pacific Northwest. Now streaming on all your favorite podcast platforms.
+                </p>
+                <br />
+                <p className="text-black-50 mb-0">
+                  Dark Northwest is an independently owned and produced podcast. All rights reserved.
                 </p>
               <Countdown />
               <div className="text-center">

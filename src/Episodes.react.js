@@ -13,7 +13,7 @@ function Episodes() {
   return (
     <>
       <Nav />
-      <Masthead buttonLabel="See episodes" />
+      <Masthead tab="episodes" buttonLabel="See episodes" />
       <section className="projects-section bg-light">
         <div className="container px-4 px-lg-5">
           <div className="row gx-0 mb-4 mb-lg-5 align-items-center">
