@@ -13,8 +13,8 @@ function LatestRelease() {
             loading="lazy"></iframe>
         </div>
       </section>
-      <section className="about-section text-center text-white-50" id="about">
-      <div className="container px-4 px-lg-5">
+      <section className="about-section text-white-50" id="about">
+      <div className="container px-lg-5">
             <div className="row gx-0 mb-lg-5 align-items-center">
               <div className="col-md-6">
               <h3>Premium Access</h3>
@@ -28,6 +28,7 @@ function LatestRelease() {
               </a>
             </div>
           </div>
+          <br />
           <br />
           <div className="row gx-0 mb-lg-5 align-items-center">
             <div className="col-md-6">
