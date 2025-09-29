@@ -7,7 +7,7 @@ function Signup() {
         <div className="row gx-4 gx-lg-5">
           <div className="col-md-10 col-lg-8 mx-auto text-center">
             <i className="far fa-paper-plane fa-2x mb-2 text-white"></i>
-            <h2 className="text-white mb-5">Stay in touch</h2>
+            <h2 className="text-white mb-5">Stay in touch via newsletter</h2>
             <form className="form-signup" id="contactForm">
               <div className="row input-group-newsletter">
                 <div className="col-md-12">
@@ -15,7 +15,7 @@ function Signup() {
                     href={GOOGLE_GROUPS_MAILTO}
                     className="btn btn-secondary"
                   >
-                    Subscribe <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                    Sign Up <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
               </div>

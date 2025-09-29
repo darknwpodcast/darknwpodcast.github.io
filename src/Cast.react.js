@@ -4,6 +4,7 @@ import Masthead from "./components/Masthead.react";
 import Contact from "./components/Contact.react.js";
 import Bio from "./components/Bio.react.js";
 import Signup from "./components/Signup.react";
+import Upsell from "./components/Upsell.react";
 
 const bios = require("./data/bios.json");
 const IMDB_URL = 'https://www.imdb.com/title/tt37996049/fullcredits/';
@@ -49,10 +50,11 @@ function Cast() {
           })}
         </div>
       </section>
-      <section className="projects-section bg-light" id="full-cast">
+      {/* <section className="projects-section bg-light" id="full-cast">
          <div className="container px-4 px-lg-5">
         </div>
-      </section>
+      </section> */}
+      <Upsell />
       <Signup />
       <AllTheCircleButtons />
       <Contact />

@@ -5,6 +5,7 @@ import Masthead from "./components/Masthead.react";
 import Countdown from "./components/Countdown.react.js";
 import Signup from "./components/Signup.react";
 import Contact from "./components/Contact.react.js";
+import Upsell from "./components/Upsell.react";
 import RssFeedFetcher from "./api/RssFeedFetcher.js";
 
 function About() {
@@ -72,6 +73,7 @@ Dark Northwest is an audio drama horror podcast inspired by real supernatural ev
           </div>
         </div>
       </section>
+      <Upsell />
       <Signup />
       <AllTheCircleButtons />
       <Contact />

@@ -4,6 +4,7 @@ import Nav from "./components/Nav.react";
 import Masthead from "./components/Masthead.react";
 import Signup from "./components/Signup.react";
 import Contact from "./components/Contact.react.js";
+import Upsell from "./components/Upsell.react.js";
 import RssFeedFetcher from "./api/RssFeedFetcher.js";
 
 function Episodes() {
@@ -52,6 +53,7 @@ function Episodes() {
           </div>
         </div>
       </section>
+      <Upsell />
       <Signup />
       <AllTheCircleButtons />
       <Contact />

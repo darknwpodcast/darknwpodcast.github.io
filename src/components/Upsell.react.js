@@ -1,20 +1,7 @@
-function LatestRelease() {
-  return (
-    <>
-      <section className="projects-section bg-light" id="projects">
-        <div className="featured-text text-center text-lg-left"
-          style={{overflow:'hidden'}}>
-          <iframe id="creators-embed" title="creators-embed" data-testid="embed-iframe-2"
-            src="https://podcasters.spotify.com/pod/show/darknwpodcast/episodes&theme=0"
-            style={{position: 'relative', top: '-125px'}}
-            frameBorder="border: 1px solid #e5e5e5;"
-            allowFullScreen=""
-            allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"></iframe>
-        </div>
-      </section>
-      <section className="about-section text-white-50" id="about">
-      <div className="container px-lg-5">
+function Upsell() {
+    return (
+        <section className="about-section text-white-50" id="about">
+          <div className="container px-lg-5">
             <div className="row gx-0 mb-lg-5 align-items-center">
               <div className="col-md-6">
               <h3>Premium Access</h3>
@@ -45,8 +32,7 @@ function LatestRelease() {
           </div>
         </div>
       </section>
-    </>
-  );
+    )
 }
 
-export default LatestRelease;
+export default Upsell;
