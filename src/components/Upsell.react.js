@@ -6,12 +6,12 @@ function Upsell() {
               <div className="col-md-6">
               <h3>Premium Access</h3>
               <p>
-                Sign up on Patreon for exclusive bonus content and other perks.
+                Sign up on Patreon for exclusive bonus content and other perks for as little as $1/month.
               </p>
             </div>
             <div className="col-md-6 text-center">
               <a className="btn btn-primary" href="https://patreon.com/darknwpodcast">
-                Subscribe Now <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                Subscribe <i className="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
             </div>
           </div>
