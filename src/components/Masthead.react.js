@@ -32,11 +32,6 @@ function Masthead(props) {
                     Listen Now <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </HashLink>
                 </p>
-                <p>
-                <HashLink className={`btn btn-secondary`} to="#about">
-                  {props.buttonLabel}
-                </HashLink>
-                </p>
               </div>
           </div>
         </div>
