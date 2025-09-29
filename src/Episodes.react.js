@@ -39,17 +39,16 @@ function Episodes() {
                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </p>
-              </div>
-            </div>
-                <h3 id="about">Episodes</h3>
-                <div id="rss-feed-id" />
-                <p className="text-black-50 mb-0">
-                  See all{' '}
+                <p>
                   <a href="https://docs.google.com/document/d/1ADhFr18cn5tB_A-kej9Bj-ei6ODsaiKW9QRAPujqYok/edit?usp=sharing">
                     SFX attributions{' '}
                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </p>
+              </div>
+            </div>
+                <h3 id="about">Episodes</h3>
+                <div id="rss-feed-id" />
           </div>
         </div>
       </section>
