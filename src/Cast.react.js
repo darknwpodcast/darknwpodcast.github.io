@@ -1,10 +1,9 @@
+import AllTheCircleButtons from './components/AllTheCircleButtons.react.js';
 import Nav from "./components/Nav.react";
 import Masthead from "./components/Masthead.react";
-import Signup from "./components/Signup.react";
-import Socials from "./components/Socials.react.js";
 import Contact from "./components/Contact.react.js";
-import Support from "./components/Support.react.js";
 import Bio from "./components/Bio.react.js";
+import Signup from "./components/Signup.react";
 
 const bios = require("./data/bios.json");
 const IMDB_URL = 'https://www.imdb.com/title/tt37996049/fullcredits/';
@@ -55,10 +54,7 @@ function Cast() {
         </div>
       </section>
       <Signup />
-      <div className="contact-section-container bg-black">
-        <Socials />
-        <Support />
-      </div>
+      <AllTheCircleButtons />
       <Contact />
     </>
   );

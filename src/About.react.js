@@ -1,11 +1,10 @@
 import { HashLink } from "react-router-hash-link";
+import AllTheCircleButtons from './components/AllTheCircleButtons.react.js'
 import Nav from "./components/Nav.react";
 import Masthead from "./components/Masthead.react";
 import Countdown from "./components/Countdown.react.js";
 import Signup from "./components/Signup.react";
-import Socials from "./components/Socials.react.js";
 import Contact from "./components/Contact.react.js";
-import Support from "./components/Support.react.js";
 import RssFeedFetcher from "./api/RssFeedFetcher.js";
 
 function About() {
@@ -70,10 +69,7 @@ Dark Northwest is an audio drama horror podcast inspired by real supernatural ev
         </div>
       </section>
       <Signup />
-      <div className="contact-section-container bg-black">
-        <Socials />
-        <Support />
-      </div>
+      <AllTheCircleButtons />
       <Contact />
     </>
   );

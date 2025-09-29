@@ -1,10 +1,9 @@
+import AllTheCircleButtons from './components/AllTheCircleButtons.react.js';
 import Countdown from "./components/Countdown.react";
 import Nav from "./components/Nav.react";
 import Masthead from "./components/Masthead.react";
 import Signup from "./components/Signup.react";
-import Socials from "./components/Socials.react.js";
 import Contact from "./components/Contact.react.js";
-import Support from "./components/Support.react.js";
 import RssFeedFetcher from "./api/RssFeedFetcher.js";
 
 function Episodes() {
@@ -54,10 +53,7 @@ function Episodes() {
         </div>
       </section>
       <Signup />
-      <div className="contact-section-container bg-black">
-        <Socials />
-        <Support />
-      </div>
+      <AllTheCircleButtons />
       <Contact />
     </>
   );

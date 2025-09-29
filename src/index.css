@@ -11278,15 +11278,10 @@ hr {
   margin: 3vh;
 }
 
-iframe {
-  border: 1px solid #333;
-  border-radius: 5px;
-}
-
-
 @media (min-width: 1000px) {
 iframe {
   width: 80%;
+  max-width: 800px;
   height: 1000px;
   }
 }
