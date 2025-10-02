@@ -5,7 +5,7 @@ function LatestRelease() {
         <div className="featured-text text-center text-lg-left"
           style={{overflow:'hidden'}}>
           <iframe id="creators-embed" title="creators-embed" data-testid="embed-iframe-2"
-            src="https://podcasters.spotify.com/pod/show/darknwpodcast/episodes&theme=0"
+            src="https://creators.spotify.com/pod/profile/darknwpodcast/"
             style={{position: 'relative', top: '-125px'}}
             frameBorder="border: 1px solid #e5e5e5;"
             allowFullScreen=""
