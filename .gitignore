@@ -2,3 +2,4 @@ node_modules
 .DS_Store
 .env
 lightsail-containers-flask/.venv
+.watchman-cookie-*
