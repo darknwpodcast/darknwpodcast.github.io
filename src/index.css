@@ -616,7 +616,6 @@ progress {
 .bio-row {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
 }
 
 .bio-image-col {
