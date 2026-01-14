@@ -9,6 +9,33 @@ import reportWebVitals from "./reportWebVitals";
 
 import { createHashRouter, RouterProvider } from "react-router";
 
+// Fix for percent-encoded hash links (e.g., #/about%23page-top -> #/about#page-top)
+// This happens when URLs with double hashes are shared/copied
+(function fixEncodedHashLinks() {
+  const hash = window.location.hash;
+  if (hash.includes("%23")) {
+    const decoded = decodeURIComponent(hash);
+    const [route, anchor] = decoded.split("#").filter(Boolean);
+
+    // Update URL without the anchor part (router handles the route)
+    window.history.replaceState(null, "", `#/${route}`);
+
+    // Scroll to anchor after page loads
+    if (anchor) {
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const element = document.getElementById(anchor);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        }, 100);
+      });
+    }
+  }
+})();
+
 const router = createHashRouter([
   {
     path: "/",
