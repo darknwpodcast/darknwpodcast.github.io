@@ -1,4 +1,24 @@
 import { HashLink } from "react-router-hash-link";
+import { useCallback } from "react";
+
+function NavLink({ to, children, className }) {
+  const handleClick = useCallback(() => {
+    // After navigation and scroll, clean up the URL by removing #page-top
+    setTimeout(() => {
+      const hash = window.location.hash;
+      if (hash.includes("#page-top")) {
+        const cleanHash = hash.replace("#page-top", "").replace(/%23page-top/i, "");
+        window.history.replaceState(null, "", cleanHash || "#/");
+      }
+    }, 100);
+  }, []);
+
+  return (
+    <HashLink className={className} to={to} onClick={handleClick}>
+      {children}
+    </HashLink>
+  );
+}
 
 function Nav() {
   return (
@@ -7,9 +27,9 @@ function Nav() {
       id="mainNav"
     >
       <div className="container px-4 px-lg-5">
-        <HashLink className="navbar-brand" to="/#page-top">
+        <NavLink className="navbar-brand" to="/#page-top">
           Dark Northwest
-        </HashLink>
+        </NavLink>
         <button
           className="navbar-toggler navbar-toggler-right"
           type="button"
@@ -25,24 +45,24 @@ function Nav() {
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <HashLink className="nav-link" to="/#page-top">
+              <NavLink className="nav-link" to="/#page-top">
                 Home
-              </HashLink>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <HashLink className="nav-link" to="/about#page-top">
+              <NavLink className="nav-link" to="/about#page-top">
                 About
-              </HashLink>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <HashLink className="nav-link" to="/episodes#page-top">
+              <NavLink className="nav-link" to="/episodes#page-top">
                 Episodes
-              </HashLink>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <HashLink className="nav-link" to="/cast#page-top">
+              <NavLink className="nav-link" to="/cast#page-top">
                 Cast & Crew
-              </HashLink>
+              </NavLink>
             </li>
             <li className="nav-item">
               <HashLink className="nav-link" to="#contact">
