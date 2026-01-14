@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "title": "Wellington, WA",
-    "subtitle": "S01 Main Story arc - located at the Iron Goat Trail at Stevens Pass in the Cascade Range",
+    "title": "Wellington",
+    "subtitle": "S01 Main Story arc - located along the Iron Goat Trail at Stevens Pass in the Cascade Range",
     "lat": 47.74735268108596,
     "lng": -121.12712408614507
   },
@@ -12,5 +12,12 @@
     "subtitle": "S01E10 Tales episode - located at the Greenwood haunted staircase in Spokane, Washington",
     "lat": 47.661810115792164,
     "lng": -117.46774010149102
+  },
+  {
+    "id": 3,
+    "title": "Hotel Sorrento",
+    "subtitle": "S01E11 Tales episode - located at the historic, boutique hotel in Seattle, Washington",
+    "lat": 47.609172527725185,
+    "lng": -122.32689355229664
   }
 ]

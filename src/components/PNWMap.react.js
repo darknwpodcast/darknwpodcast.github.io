@@ -101,7 +101,7 @@ function PNWMap() {
               Explore the Pacific Northwest
             </h2>
             <p className="text-white-50 mb-4 text-center">
-              Discover the real locations that inspired Dark Northwest
+              Discover the real hauntings that inspired Dark Northwest
             </p>
             <div
               ref={mapRef}
