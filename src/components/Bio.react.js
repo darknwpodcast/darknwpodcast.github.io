@@ -29,11 +29,13 @@ function Bio(props) {
 
   if (props.flavor === "A") {
     return (
-      <div className="row gx-0 mb-5 mb-lg-0 justify-content-center">
-        <div className="col-lg-6">
-          <img className="img-fluid img-bio" src={photo} alt={member.name} />
+      <div className="row gx-0 mb-5 mb-lg-0 justify-content-center bio-row">
+        <div className="col-lg-6 bio-image-col">
+          <div className="bio-image-wrapper">
+            <img className="bio-image" src={photo} alt={member.name} />
+          </div>
         </div>
-        <div className="col-lg-6">
+        <div className="col-lg-6 bio-content-col">
           <div className="bg-black text-center h-100 project">
             <div className="d-flex h-100">
               <div className="project-text w-100 my-auto text-center text-lg-left">
@@ -46,11 +48,13 @@ function Bio(props) {
     );
   } else {
     return (
-      <div className="row gx-0 justify-content-center">
-        <div className="col-lg-6">
-          <img className="img-fluid img-bio" src={photo} alt={member.name} />
+      <div className="row gx-0 justify-content-center bio-row">
+        <div className="col-lg-6 bio-image-col">
+          <div className="bio-image-wrapper">
+            <img className="bio-image" src={photo} alt={member.name} />
+          </div>
         </div>
-        <div className="col-lg-6 order-lg-first">
+        <div className="col-lg-6 order-lg-first bio-content-col">
           <div className="bg-black text-center h-100 project">
             <div className="d-flex h-100">
               <div className="project-text w-100 my-auto text-center text-lg-right">
