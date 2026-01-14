@@ -16,17 +16,22 @@ function PNWMap() {
       const L = window.L;
       if (!L) return;
 
-      const pnwCenter = [47.5, -122.0];
-      const map = L.map(mapRef.current).setView(pnwCenter, 7);
+      const pnwCenter = [49.276926732674355, -122.8490206310808];
+      const map = L.map(mapRef.current).setView(pnwCenter, 5);
 
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      }).addTo(map);
+      L.tileLayer(
+        "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+        {
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          subdomains: "abcd",
+          maxZoom: 20,
+        }
+      ).addTo(map);
 
       const darkIcon = L.divIcon({
         className: "pnw-map-marker",
-        html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#6a0dad" width="32" height="32">
+        html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ba2201" width="32" height="32">
           <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
         </svg>`,
         iconSize: [32, 32],
