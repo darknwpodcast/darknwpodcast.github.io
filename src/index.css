@@ -11163,6 +11163,141 @@ body {
   }
 }
 
+/* Page-specific Masthead Themes */
+.masthead-icon-wrapper {
+  margin-bottom: 1rem;
+}
+
+.masthead-page-icon {
+  font-size: 2.5rem;
+  opacity: 0.9;
+  text-shadow: 0 0 20px currentColor;
+  animation: iconPulse 3s ease-in-out infinite;
+}
+
+.masthead-tagline {
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin: 0.5rem 0 1rem;
+  opacity: 0.85;
+}
+
+.masthead-divider {
+  width: 80px;
+  height: 3px;
+  margin: 1.5rem auto;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* Home Theme - Green/Teal (Primary brand) */
+.masthead-home {
+  background: linear-gradient(to bottom, rgba(21, 190, 109, 0.15) 0%, rgba(0, 0, 0, 0.7) 50%, #000 100%), url("../public/bg-masthead.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+.masthead-home .masthead-page-icon {
+  color: var(--bs-teal);
+}
+.masthead-home .masthead-tagline {
+  color: var(--bs-teal);
+}
+.masthead-home .masthead-divider {
+  background: linear-gradient(90deg, transparent, var(--bs-teal), transparent);
+}
+
+/* About Theme - Purple/Ghost (Mystery) */
+.masthead-about {
+  background: linear-gradient(to bottom, rgba(106, 13, 173, 0.2) 0%, rgba(0, 0, 0, 0.75) 50%, #000 100%), url("../public/bg-masthead.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+.masthead-about .masthead-page-icon {
+  color: #9b59b6;
+  animation: ghostFloat 3s ease-in-out infinite;
+}
+.masthead-about .masthead-tagline {
+  color: #bb8fce;
+}
+.masthead-about .masthead-divider {
+  background: linear-gradient(90deg, transparent, #9b59b6, transparent);
+}
+
+@keyframes ghostFloat {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.9; }
+  50% { transform: translateY(-8px) scale(1.05); opacity: 1; }
+}
+
+/* Episodes Theme - Red/Orange (Danger/Horror) */
+.masthead-episodes {
+  background: linear-gradient(to bottom, rgba(186, 34, 1, 0.2) 0%, rgba(0, 0, 0, 0.75) 50%, #000 100%), url("../public/bg-masthead.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+.masthead-episodes .masthead-page-icon {
+  color: var(--bs-tertiary);
+}
+.masthead-episodes .masthead-tagline {
+  color: #e74c3c;
+}
+.masthead-episodes .masthead-divider {
+  background: linear-gradient(90deg, transparent, var(--bs-tertiary), transparent);
+}
+
+/* Cast Theme - Yellow/Gold (Spotlight) */
+.masthead-cast {
+  background: linear-gradient(to bottom, rgba(228, 198, 98, 0.15) 0%, rgba(0, 0, 0, 0.75) 50%, #000 100%), url("../public/bg-masthead.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+.masthead-cast .masthead-page-icon {
+  color: var(--bs-yellow);
+}
+.masthead-cast .masthead-tagline {
+  color: var(--bs-yellow);
+}
+.masthead-cast .masthead-divider {
+  background: linear-gradient(90deg, transparent, var(--bs-yellow), transparent);
+}
+
+@media (min-width: 768px) {
+  .masthead-page-icon {
+    font-size: 3rem;
+  }
+  .masthead-tagline {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead-page-icon {
+    font-size: 3.5rem;
+  }
+  .masthead-tagline {
+    font-size: 1.4rem;
+    letter-spacing: 0.3rem;
+  }
+  .masthead-divider {
+    width: 120px;
+    height: 4px;
+  }
+}
+
 .about-section {
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
   padding-bottom: 5rem;
