@@ -6,7 +6,6 @@ import Signup from "./components/Signup.react";
 import Contact from "./components/Contact.react.js";
 import Upsell from "./components/Upsell.react.js";
 import RssFeedFetcher from "./api/RssFeedFetcher.js";
-import PNWMap from "./components/PNWMap.react.js";
 
 function Episodes() {
   const rss = new RssFeedFetcher();
@@ -16,9 +15,6 @@ function Episodes() {
     <>
       <Nav />
       <Masthead tab="episodes" buttonLabel="See episodes" />
-      <section>
-        <PNWMap />
-      </section>
       <section className="projects-section bg-light">
         <div className="container px-4 px-lg-5">
           <div className="row gx-0 mb-4 mb-lg-5 align-items-center">

@@ -7,6 +7,7 @@ import Signup from "./components/Signup.react";
 import Contact from "./components/Contact.react.js";
 import Upsell from "./components/Upsell.react";
 import RssFeedFetcher from "./api/RssFeedFetcher.js";
+import PNWMap from "./components/PNWMap.react.js";
 
 function About() {
   const rss = new RssFeedFetcher();
@@ -16,6 +17,7 @@ function About() {
     <>
       <Nav />
       <Masthead tab="about" buttonLabel="About Us" />
+              <PNWMap />
        <section className="about-section text-center" id="about">
         <div className="container px-4 px-lg-5">
           <div className="row gx-4 gx-lg-5 justify-content-center">
@@ -27,7 +29,7 @@ function About() {
                 height="400px"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen></iframe> */}
+              allowFullScreen></iframe> */}
               <div id="rss-summary-id" className="text-white-50" />
             </div>
           </div>
