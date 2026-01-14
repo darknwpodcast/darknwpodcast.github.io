@@ -5,10 +5,10 @@ function Socials(props) {
       fb: "https://facebook.com/DarkNWPodcast",
       ig: "https://www.instagram.com/darknwpodcast/",
       tiktok: "https://www.tiktok.com/@darknwpodcast",
-      // bluesky: "https://bsky.app/profile/darknwpodcast.bsky.social",
-      // threads: "https://www.threads.com/@darknwpodcast",
+      bluesky: "https://bsky.app/profile/darknwpodcast.bsky.social",
+      threads: "https://www.threads.com/@darknwpodcast",
       youtube: "https://www.youtube.com/@DarkNWPodcast",
-      // tb: "https://www.tumblr.com/darknwpodcast",
+      tb: "https://www.tumblr.com/darknwpodcast",
     };
   } else {
     socials = props.socials;
