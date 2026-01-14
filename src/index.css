@@ -649,12 +649,12 @@ progress {
   .bio-row {
     min-height: 400px;
   }
-  
+
   .bio-image-wrapper {
     height: 100%;
     min-height: unset;
   }
-  
+
   .bio-image-col,
   .bio-content-col {
     flex: 0 0 50%;
