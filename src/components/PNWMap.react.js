@@ -108,7 +108,7 @@ function PNWMap() {
               id="pnw-map"
               style={{
                 height: "500px",
-                width: "100%",
+                width: "90%",
                 borderRadius: "8px",
                 boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)",
               }}
