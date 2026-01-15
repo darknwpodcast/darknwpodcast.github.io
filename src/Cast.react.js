@@ -27,10 +27,9 @@ function Cast() {
             </div>
             <div className="col-md-6">
               <div className="featured-text text-center text-lg-left">
-                <h3 id="about">Main Cast and Crew</h3>
+                <h3 id="about">Meet the Main Cast and Crew</h3>
                 <p className="text-black-50 mb-0" >
-                  Meet the cast and crew of Season 1.
-                  See full cast and crew credits on {' '}
+                  See full credits on {' '}
                   <a href={IMDB_URL} target="_blank" rel="noreferrer">
                     IMDb{' '}
                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
