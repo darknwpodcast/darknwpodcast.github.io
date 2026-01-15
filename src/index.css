@@ -11489,6 +11489,18 @@ iframe {
   border: none;
 }
 
+.pnw-ghost-marker {
+  font-size: 28px;
+  color: #9b59b6;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  animation: ghostFloat 3s ease-in-out infinite;
+  display: block;
+}
+
+.pnw-ghost-marker:hover {
+  transform: scale(1.2);
+}
+
 .pnw-popup {
   padding: 0.5rem;
   min-width: 150px;
