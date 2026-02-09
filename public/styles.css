@@ -11194,3 +11194,140 @@ body {
 .footer {
   padding: 5rem 0;
 }
+
+/* PNW Map Navigation Styles */
+.pnw-map-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(30, 30, 30, 0.95);
+  padding: 12px 16px;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
+}
+
+.pnw-map-nav-btn {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.pnw-map-nav-btn:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pnw-map-nav-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.pnw-map-nav-center {
+  text-align: center;
+  flex: 1;
+  padding: 0 16px;
+}
+
+.pnw-map-nav-title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.pnw-map-nav-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+}
+
+.pnw-map-nav-subtitle.has-reset {
+  margin-bottom: 8px;
+}
+
+.pnw-map-reset-btn {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.pnw-map-reset-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+#pnw-map {
+  height: 450px;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pnw-map-hint {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.pnw-map-hint i {
+  margin-right: 6px;
+}
+
+/* PNW Map Cluster Styles */
+.pnw-cluster-icon {
+  background: transparent !important;
+}
+
+.pnw-cluster-bubble {
+  width: 45px;
+  height: 45px;
+  background: #9b59b6;
+  border: 2px solid #9b59b6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4), 0 0 20px rgba(155, 89, 182, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pnw-cluster-bubble:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(155, 89, 182, 0.6), 0 0 30px rgba(155, 89, 182, 0.3);
+}
+
+.pnw-cluster-count {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1;
+  text-align: center;
+}
+
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+  background: transparent !important;
+}
+
+.marker-cluster-small div,
+.marker-cluster-medium div,
+.marker-cluster-large div {
+  background: transparent !important;
+}

@@ -5,42 +5,42 @@ function PNWMap() {
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
   const markersRef = useRef([]);
+  const clusterGroupRef = useRef(null);
   const isInitializedRef = useRef(false);
   const navControlRef = useRef(null);
 
   const [currentIndex, setCurrentIndex] = useState(-1);
   const [isMapReady, setIsMapReady] = useState(false);
 
-  const navigateToLocation = useCallback(
-    (index) => {
-      if (!mapInstanceRef.current || !markersRef.current.length) return;
+  const navigateToLocation = useCallback((index) => {
+    if (!mapInstanceRef.current || !markersRef.current.length) return;
 
-      const wrappedIndex =
-        ((index % mapLocations.length) + mapLocations.length) %
-        mapLocations.length;
-      setCurrentIndex(wrappedIndex);
+    const wrappedIndex =
+      ((index % mapLocations.length) + mapLocations.length) %
+      mapLocations.length;
+    setCurrentIndex(wrappedIndex);
 
-      const marker = markersRef.current[wrappedIndex];
-      const location = mapLocations[wrappedIndex];
+    const marker = markersRef.current[wrappedIndex];
+    const location = mapLocations[wrappedIndex];
 
-      mapInstanceRef.current.setView([location.lat, location.lng], 10, {
-        animate: true,
-        duration: 0.5,
-      });
+    mapInstanceRef.current.setView([location.lat, location.lng], 10, {
+      animate: true,
+      duration: 0.5,
+    });
 
-      markersRef.current.forEach((m) => m.closePopup());
-      marker.openPopup();
-    },
-    []
-  );
+    markersRef.current.forEach((m) => m.closePopup());
+    marker.openPopup();
+  }, []);
 
   const handlePrevious = useCallback(() => {
-    const newIndex = currentIndex <= 0 ? mapLocations.length - 1 : currentIndex - 1;
+    const newIndex =
+      currentIndex <= 0 ? mapLocations.length - 1 : currentIndex - 1;
     navigateToLocation(newIndex);
   }, [currentIndex, navigateToLocation]);
 
   const handleNext = useCallback(() => {
-    const newIndex = currentIndex >= mapLocations.length - 1 ? 0 : currentIndex + 1;
+    const newIndex =
+      currentIndex >= mapLocations.length - 1 ? 0 : currentIndex + 1;
     navigateToLocation(newIndex);
   }, [currentIndex, navigateToLocation]);
 
@@ -85,7 +85,7 @@ function PNWMap() {
       if (!mapRef.current || mapInstanceRef.current) return;
 
       const L = window.L;
-      if (!L) return;
+      if (!L || !L.markerClusterGroup) return;
 
       const pnwCenter = [49.276926732674355, -122.8490206310808];
       const map = L.map(mapRef.current).setView(pnwCenter, 5);
@@ -108,11 +108,29 @@ function PNWMap() {
         popupAnchor: [0, -28],
       });
 
+      const clusterGroup = L.markerClusterGroup({
+        iconCreateFunction: function (cluster) {
+          const count = cluster.getChildCount();
+          return L.divIcon({
+            html: `<div class="pnw-cluster-bubble">
+              <span class="pnw-cluster-count">${count}</span>
+            </div>`,
+            className: "pnw-cluster-icon",
+            iconSize: [45, 45],
+            iconAnchor: [22, 22],
+          });
+        },
+        showCoverageOnHover: false,
+        spiderfyOnMaxZoom: true,
+        zoomToBoundsOnClick: true,
+        maxClusterRadius: 20,
+      });
+
       const markers = [];
       mapLocations.forEach((location, index) => {
         const marker = L.marker([location.lat, location.lng], {
           icon: darkIcon,
-        }).addTo(map);
+        });
 
         marker.bindPopup(`
           <div class="pnw-popup">
@@ -126,15 +144,18 @@ function PNWMap() {
         });
 
         markers.push(marker);
+        clusterGroup.addLayer(marker);
       });
 
+      map.addLayer(clusterGroup);
+      clusterGroupRef.current = clusterGroup;
       markersRef.current = markers;
       mapInstanceRef.current = map;
       setIsMapReady(true);
     };
 
     const loadLeaflet = () => {
-      if (!document.querySelector('link[href*="leaflet"]')) {
+      if (!document.querySelector('link[href*="leaflet.css"]')) {
         const linkEl = document.createElement("link");
         linkEl.rel = "stylesheet";
         linkEl.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
@@ -144,27 +165,57 @@ function PNWMap() {
         document.head.appendChild(linkEl);
       }
 
+      if (!document.querySelector('link[href*="MarkerCluster"]')) {
+        const clusterCss = document.createElement("link");
+        clusterCss.rel = "stylesheet";
+        clusterCss.href =
+          "https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css";
+        document.head.appendChild(clusterCss);
+
+        const clusterDefaultCss = document.createElement("link");
+        clusterDefaultCss.rel = "stylesheet";
+        clusterDefaultCss.href =
+          "https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css";
+        document.head.appendChild(clusterDefaultCss);
+      }
+
+      const loadScript = (src, integrity, callback) => {
+        if (document.querySelector(`script[src="${src}"]`)) {
+          callback && callback();
+          return;
+        }
+        const script = document.createElement("script");
+        script.src = src;
+        if (integrity) {
+          script.integrity = integrity;
+          script.crossOrigin = "";
+        }
+        script.onload = callback;
+        document.body.appendChild(script);
+      };
+
+      const loadMarkerCluster = () => {
+        if (window.L && window.L.markerClusterGroup) {
+          initMap();
+          return;
+        }
+        loadScript(
+          "https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js",
+          null,
+          initMap
+        );
+      };
+
       if (window.L) {
-        initMap();
+        loadMarkerCluster();
         return;
       }
 
-      if (!document.querySelector('script[src*="leaflet"]')) {
-        const script = document.createElement("script");
-        script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
-        script.integrity =
-          "sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=";
-        script.crossOrigin = "";
-        script.onload = initMap;
-        document.body.appendChild(script);
-      } else {
-        const checkLeaflet = setInterval(() => {
-          if (window.L) {
-            clearInterval(checkLeaflet);
-            initMap();
-          }
-        }, 50);
-      }
+      loadScript(
+        "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js",
+        "sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=",
+        loadMarkerCluster
+      );
     };
 
     loadLeaflet();
@@ -192,73 +243,23 @@ function PNWMap() {
               onKeyDown={handleKeyDown}
               role="application"
               aria-label="Map location navigator. Use left and right arrow keys to navigate between locations."
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                backgroundColor: "rgba(30, 30, 30, 0.95)",
-                padding: "12px 16px",
-                borderRadius: "8px 8px 0 0",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
-                borderBottom: "none",
-              }}
             >
               <button
                 onClick={handlePrevious}
                 disabled={!isMapReady}
                 aria-label="Previous location"
-                style={{
-                  backgroundColor: "transparent",
-                  border: "1px solid rgba(255, 255, 255, 0.3)",
-                  color: "#fff",
-                  padding: "8px 16px",
-                  borderRadius: "4px",
-                  cursor: isMapReady ? "pointer" : "not-allowed",
-                  opacity: isMapReady ? 1 : 0.5,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "6px",
-                  transition: "all 0.2s ease",
-                }}
-                onMouseOver={(e) =>
-                  isMapReady &&
-                  (e.currentTarget.style.backgroundColor =
-                    "rgba(255, 255, 255, 0.1)")
-                }
-                onMouseOut={(e) =>
-                  (e.currentTarget.style.backgroundColor = "transparent")
-                }
+                className="pnw-map-nav-btn"
               >
                 <i className="fa-solid fa-chevron-left" aria-hidden="true"></i>
                 <span className="d-none d-sm-inline">Prev</span>
               </button>
 
-              <div
-                style={{
-                  textAlign: "center",
-                  flex: 1,
-                  padding: "0 16px",
-                }}
-              >
-                <div
-                  style={{
-                    color: "#fff",
-                    fontWeight: "600",
-                    fontSize: "1rem",
-                    marginBottom: "2px",
-                  }}
-                  aria-live="polite"
-                >
-                  {currentLocation
-                    ? currentLocation.title
-                    : "Select a location"}
+              <div className="pnw-map-nav-center">
+                <div className="pnw-map-nav-title" aria-live="polite">
+                  {currentLocation ? currentLocation.title : "Select a location"}
                 </div>
                 <div
-                  style={{
-                    color: "rgba(255, 255, 255, 0.6)",
-                    fontSize: "0.75rem",
-                    marginBottom: currentIndex >= 0 ? "8px" : "0",
-                  }}
+                  className={`pnw-map-nav-subtitle${currentIndex >= 0 ? " has-reset" : ""}`}
                 >
                   {currentIndex >= 0
                     ? `${currentIndex + 1} of ${mapLocations.length}`
@@ -268,30 +269,12 @@ function PNWMap() {
                   <button
                     onClick={handleReset}
                     aria-label="Reset map to overview"
-                    style={{
-                      backgroundColor: "transparent",
-                      border: "1px solid rgba(255, 255, 255, 0.2)",
-                      color: "rgba(255, 255, 255, 0.7)",
-                      padding: "4px 12px",
-                      borderRadius: "4px",
-                      cursor: "pointer",
-                      fontSize: "0.75rem",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "4px",
-                      transition: "all 0.2s ease",
-                    }}
-                    onMouseOver={(e) => {
-                      e.currentTarget.style.backgroundColor =
-                        "rgba(255, 255, 255, 0.1)";
-                      e.currentTarget.style.color = "#fff";
-                    }}
-                    onMouseOut={(e) => {
-                      e.currentTarget.style.backgroundColor = "transparent";
-                      e.currentTarget.style.color = "rgba(255, 255, 255, 0.7)";
-                    }}
+                    className="pnw-map-reset-btn"
                   >
-                    <i className="fa-solid fa-rotate-left" aria-hidden="true"></i>
+                    <i
+                      className="fa-solid fa-rotate-left"
+                      aria-hidden="true"
+                    ></i>
                     Reset
                   </button>
                 )}
@@ -301,54 +284,18 @@ function PNWMap() {
                 onClick={handleNext}
                 disabled={!isMapReady}
                 aria-label="Next location"
-                style={{
-                  backgroundColor: "transparent",
-                  border: "1px solid rgba(255, 255, 255, 0.3)",
-                  color: "#fff",
-                  padding: "8px 16px",
-                  borderRadius: "4px",
-                  cursor: isMapReady ? "pointer" : "not-allowed",
-                  opacity: isMapReady ? 1 : 0.5,
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "6px",
-                  transition: "all 0.2s ease",
-                }}
-                onMouseOver={(e) =>
-                  isMapReady &&
-                  (e.currentTarget.style.backgroundColor =
-                    "rgba(255, 255, 255, 0.1)")
-                }
-                onMouseOut={(e) =>
-                  (e.currentTarget.style.backgroundColor = "transparent")
-                }
+                className="pnw-map-nav-btn"
               >
                 <span className="d-none d-sm-inline">Next</span>
                 <i className="fa-solid fa-chevron-right" aria-hidden="true"></i>
               </button>
             </div>
 
-            <div
-              ref={mapRef}
-              id="pnw-map"
-              style={{
-                height: "450px",
-                width: "100%",
-                borderRadius: "0 0 8px 8px",
-                boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)",
-              }}
-            ></div>
+            <div ref={mapRef} id="pnw-map"></div>
 
             {/* Keyboard hint */}
-            <p
-              style={{
-                color: "rgba(255, 255, 255, 0.5)",
-                fontSize: "0.8rem",
-                textAlign: "center",
-                marginTop: "12px",
-              }}
-            >
-              <i className="fa-solid fa-keyboard" style={{ marginRight: "6px" }}></i>
+            <p className="pnw-map-hint">
+              <i className="fa-solid fa-keyboard"></i>
               Tip: Click the navigation bar and use arrow keys to navigate
             </p>
           </div>
