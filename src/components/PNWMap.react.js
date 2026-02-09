@@ -1,10 +1,68 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import mapLocations from "../data/mapLocations.json";
 
 function PNWMap() {
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
+  const markersRef = useRef([]);
   const isInitializedRef = useRef(false);
+  const navControlRef = useRef(null);
+
+  const [currentIndex, setCurrentIndex] = useState(-1);
+  const [isMapReady, setIsMapReady] = useState(false);
+
+  const navigateToLocation = useCallback(
+    (index) => {
+      if (!mapInstanceRef.current || !markersRef.current.length) return;
+
+      const wrappedIndex =
+        ((index % mapLocations.length) + mapLocations.length) %
+        mapLocations.length;
+      setCurrentIndex(wrappedIndex);
+
+      const marker = markersRef.current[wrappedIndex];
+      const location = mapLocations[wrappedIndex];
+
+      mapInstanceRef.current.setView([location.lat, location.lng], 10, {
+        animate: true,
+        duration: 0.5,
+      });
+
+      markersRef.current.forEach((m) => m.closePopup());
+      marker.openPopup();
+    },
+    []
+  );
+
+  const handlePrevious = useCallback(() => {
+    const newIndex = currentIndex <= 0 ? mapLocations.length - 1 : currentIndex - 1;
+    navigateToLocation(newIndex);
+  }, [currentIndex, navigateToLocation]);
+
+  const handleNext = useCallback(() => {
+    const newIndex = currentIndex >= mapLocations.length - 1 ? 0 : currentIndex + 1;
+    navigateToLocation(newIndex);
+  }, [currentIndex, navigateToLocation]);
+
+  const handleKeyDown = useCallback(
+    (e) => {
+      if (!isMapReady) return;
+
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        handlePrevious();
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        handleNext();
+      } else if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        if (currentIndex === -1) {
+          navigateToLocation(0);
+        }
+      }
+    },
+    [isMapReady, currentIndex, handlePrevious, handleNext, navigateToLocation]
+  );
 
   useEffect(() => {
     if (isInitializedRef.current) return;
@@ -37,7 +95,8 @@ function PNWMap() {
         popupAnchor: [0, -28],
       });
 
-      mapLocations.forEach((location) => {
+      const markers = [];
+      mapLocations.forEach((location, index) => {
         const marker = L.marker([location.lat, location.lng], {
           icon: darkIcon,
         }).addTo(map);
@@ -48,9 +107,17 @@ function PNWMap() {
             <p class="pnw-popup-subtitle">${location.subtitle}</p>
           </div>
         `);
+
+        marker.on("click", () => {
+          setCurrentIndex(index);
+        });
+
+        markers.push(marker);
       });
 
+      markersRef.current = markers;
       mapInstanceRef.current = map;
+      setIsMapReady(true);
     };
 
     const loadLeaflet = () => {
@@ -90,6 +157,8 @@ function PNWMap() {
     loadLeaflet();
   }, []);
 
+  const currentLocation = currentIndex >= 0 ? mapLocations[currentIndex] : null;
+
   return (
     <section className="pnw-map-section" id="map">
       <div className="container">
@@ -101,16 +170,142 @@ function PNWMap() {
             <p className="text-white-50 mb-4 text-center">
               Discover the real hauntings that inspired Dark Northwest
             </p>
+
+            {/* Keyboard Navigation Control Bar */}
+            <div
+              ref={navControlRef}
+              className="pnw-map-nav"
+              tabIndex={0}
+              onKeyDown={handleKeyDown}
+              role="application"
+              aria-label="Map location navigator. Use left and right arrow keys to navigate between locations."
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                backgroundColor: "rgba(30, 30, 30, 0.95)",
+                padding: "12px 16px",
+                borderRadius: "8px 8px 0 0",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                borderBottom: "none",
+              }}
+            >
+              <button
+                onClick={handlePrevious}
+                disabled={!isMapReady}
+                aria-label="Previous location"
+                style={{
+                  backgroundColor: "transparent",
+                  border: "1px solid rgba(255, 255, 255, 0.3)",
+                  color: "#fff",
+                  padding: "8px 16px",
+                  borderRadius: "4px",
+                  cursor: isMapReady ? "pointer" : "not-allowed",
+                  opacity: isMapReady ? 1 : 0.5,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  transition: "all 0.2s ease",
+                }}
+                onMouseOver={(e) =>
+                  isMapReady &&
+                  (e.currentTarget.style.backgroundColor =
+                    "rgba(255, 255, 255, 0.1)")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.backgroundColor = "transparent")
+                }
+              >
+                <i className="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                <span className="d-none d-sm-inline">Prev</span>
+              </button>
+
+              <div
+                style={{
+                  textAlign: "center",
+                  flex: 1,
+                  padding: "0 16px",
+                }}
+              >
+                <div
+                  style={{
+                    color: "#fff",
+                    fontWeight: "600",
+                    fontSize: "1rem",
+                    marginBottom: "2px",
+                  }}
+                  aria-live="polite"
+                >
+                  {currentLocation
+                    ? currentLocation.title
+                    : "Select a location"}
+                </div>
+                <div
+                  style={{
+                    color: "rgba(255, 255, 255, 0.6)",
+                    fontSize: "0.75rem",
+                  }}
+                >
+                  {currentIndex >= 0
+                    ? `${currentIndex + 1} of ${mapLocations.length}`
+                    : "Use ← → arrows or click to navigate"}
+                </div>
+              </div>
+
+              <button
+                onClick={handleNext}
+                disabled={!isMapReady}
+                aria-label="Next location"
+                style={{
+                  backgroundColor: "transparent",
+                  border: "1px solid rgba(255, 255, 255, 0.3)",
+                  color: "#fff",
+                  padding: "8px 16px",
+                  borderRadius: "4px",
+                  cursor: isMapReady ? "pointer" : "not-allowed",
+                  opacity: isMapReady ? 1 : 0.5,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  transition: "all 0.2s ease",
+                }}
+                onMouseOver={(e) =>
+                  isMapReady &&
+                  (e.currentTarget.style.backgroundColor =
+                    "rgba(255, 255, 255, 0.1)")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.backgroundColor = "transparent")
+                }
+              >
+                <span className="d-none d-sm-inline">Next</span>
+                <i className="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              </button>
+            </div>
+
             <div
               ref={mapRef}
               id="pnw-map"
               style={{
                 height: "450px",
                 width: "100%",
-                borderRadius: "8px",
+                borderRadius: "0 0 8px 8px",
                 boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)",
               }}
             ></div>
+
+            {/* Keyboard hint */}
+            <p
+              style={{
+                color: "rgba(255, 255, 255, 0.5)",
+                fontSize: "0.8rem",
+                textAlign: "center",
+                marginTop: "12px",
+              }}
+            >
+              <i className="fa-solid fa-keyboard" style={{ marginRight: "6px" }}></i>
+              Tip: Click the navigation bar and use arrow keys to navigate
+            </p>
           </div>
         </div>
       </div>
