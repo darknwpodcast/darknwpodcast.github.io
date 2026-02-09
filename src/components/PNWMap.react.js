@@ -44,6 +44,19 @@ function PNWMap() {
     navigateToLocation(newIndex);
   }, [currentIndex, navigateToLocation]);
 
+  const handleReset = useCallback(() => {
+    if (!mapInstanceRef.current) return;
+
+    const pnwCenter = [49.276926732674355, -122.8490206310808];
+    mapInstanceRef.current.setView(pnwCenter, 5, {
+      animate: true,
+      duration: 0.5,
+    });
+
+    markersRef.current.forEach((m) => m.closePopup());
+    setCurrentIndex(-1);
+  }, []);
+
   const handleKeyDown = useCallback(
     (e) => {
       if (!isMapReady) return;
@@ -244,12 +257,44 @@ function PNWMap() {
                   style={{
                     color: "rgba(255, 255, 255, 0.6)",
                     fontSize: "0.75rem",
+                    marginBottom: currentIndex >= 0 ? "8px" : "0",
                   }}
                 >
                   {currentIndex >= 0
                     ? `${currentIndex + 1} of ${mapLocations.length}`
                     : "Use ← → arrows or click to navigate"}
                 </div>
+                {currentIndex >= 0 && (
+                  <button
+                    onClick={handleReset}
+                    aria-label="Reset map to overview"
+                    style={{
+                      backgroundColor: "transparent",
+                      border: "1px solid rgba(255, 255, 255, 0.2)",
+                      color: "rgba(255, 255, 255, 0.7)",
+                      padding: "4px 12px",
+                      borderRadius: "4px",
+                      cursor: "pointer",
+                      fontSize: "0.75rem",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "4px",
+                      transition: "all 0.2s ease",
+                    }}
+                    onMouseOver={(e) => {
+                      e.currentTarget.style.backgroundColor =
+                        "rgba(255, 255, 255, 0.1)";
+                      e.currentTarget.style.color = "#fff";
+                    }}
+                    onMouseOut={(e) => {
+                      e.currentTarget.style.backgroundColor = "transparent";
+                      e.currentTarget.style.color = "rgba(255, 255, 255, 0.7)";
+                    }}
+                  >
+                    <i className="fa-solid fa-rotate-left" aria-hidden="true"></i>
+                    Reset
+                  </button>
+                )}
               </div>
 
               <button
