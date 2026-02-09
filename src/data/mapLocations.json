@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Wellington",
-    "subtitle": "S01 Main Story arc - located along the Iron Goat Trail at Stevens Pass in the Cascade Range",
+    "subtitle": "Season 1 (S01) Main Story arc - located along the Iron Goat Trail at Stevens Pass, 96 people perished in the 1910 Wellington train disaster, making it North America's deadliest avalanche",
     "lat": 47.74735268108596,
     "lng": -121.12712408614507
   },
@@ -33,5 +33,12 @@
     "subtitle": "Tales E04 - Seattle's oldest continuosly operationg restaurant and bar",
     "lat": 47.60181648537226,
     "lng": -122.3332442071832
+  },
+  {
+    "id": 99,
+    "title": "Wilderness Heights Sanitarium",
+    "subtitle": "Season 02 (S02) Main Story arc - a.k.a. Starvation Heights, the inpatient clinic of the fasting specialist Dr. Linda Burford Hazzard, also called 'The Starvation Doctor.' Dozens died under her care.",
+    "lat": 47.426481157825926,
+    "lng": -122.55400281341491
   }
 ]
