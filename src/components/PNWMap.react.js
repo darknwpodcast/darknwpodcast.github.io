@@ -123,7 +123,7 @@ function PNWMap() {
         showCoverageOnHover: false,
         spiderfyOnMaxZoom: true,
         zoomToBoundsOnClick: true,
-        maxClusterRadius: 10,
+        maxClusterRadius: 3,
       });
 
       const markers = [];
