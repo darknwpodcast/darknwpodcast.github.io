@@ -19,5 +19,19 @@
     "subtitle": "Tales E02 - located at the historic, boutique hotel in Seattle, Washington",
     "lat": 47.609172527725185,
     "lng": -122.32689355229664
+  },
+  {
+    "id": 4,
+    "title": "Seattle Underground",
+    "subtitle": "Tales E03 - the city underenath the city of Seattle, Washington",
+    "lat": 47.6021599398105,
+    "lng": -122.33423859111195
+  },
+  {
+    "id": 5,
+    "title": "Merchant's Cafe and Saloon",
+    "subtitle": "Tales E04 - Seattle's oldest continuosly operationg restaurant and bar",
+    "lat": 47.60181648537226,
+    "lng": -122.3332442071832
   }
 ]
