@@ -8,8 +8,8 @@
   },
   {
     "id": 2,
-    "title": "The Thousand Steps",
-    "subtitle": "Tales E01 - located at the Greenwood Cemetery's staircase in Spokane, Washington",
+    "title": "Greenwood Cemetery",
+    "subtitle": "Tales E01 - located at the Thousand Steps staircase in Spokane, Washington",
     "lat": 47.661810115792164,
     "lng": -117.46774010149102
   },
@@ -22,17 +22,17 @@
   },
   {
     "id": 4,
-    "title": "Seattle Underground",
-    "subtitle": "Tales E03 - the city underenath the city of Seattle, Washington",
-    "lat": 47.6021599398105,
-    "lng": -122.33423859111195
+    "title": "Merchant's Cafe and Saloon",
+    "subtitle": "Tales E03 - Seattle's oldest continuosly operationg restaurant and bar",
+    "lat": 47.60181648537226,
+    "lng": -122.3332442071832
   },
   {
     "id": 5,
-    "title": "Merchant's Cafe and Saloon",
-    "subtitle": "Tales E04 - Seattle's oldest continuosly operationg restaurant and bar",
-    "lat": 47.60181648537226,
-    "lng": -122.3332442071832
+    "title": "Seattle Underground",
+    "subtitle": "Tales E04 - the city underenath the city of Seattle, Washington",
+    "lat": 47.6021599398105,
+    "lng": -122.33423859111195
   },
   {
     "id": 99,
