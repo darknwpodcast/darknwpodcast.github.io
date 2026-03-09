@@ -35,6 +35,20 @@
     "lng": -122.33423859111195
   },
   {
+    "id": 6,
+    "title": "Egyptian Theater",
+    "subtitle": "Tales TBD - outside the theater at the crossroads in Boise, Idaho",
+    "lat": 43.61526381306698,
+    "lng": -116.20210803836099
+  },
+  {
+    "id": 7,
+    "title": "Highway 101",
+    "subtitle": "Tales TBD - along a stretch of Highway 101 in Cannon Beach, Oregon",
+    "lat": 45.91394390000475,
+    "lng": -123.94235271344297
+  },
+  {
     "id": 99,
     "title": "Wilderness Heights Sanitarium",
     "subtitle": "Season 02 (S02) Main Story arc - a.k.a. Starvation Heights, the inpatient clinic of the fasting specialist Dr. Linda Burford Hazzard, also called 'The Starvation Doctor.' Dozens died under her care.",

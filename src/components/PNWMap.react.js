@@ -87,7 +87,7 @@ function PNWMap() {
       const L = window.L;
       if (!L || !L.markerClusterGroup) return;
 
-      const pnwCenter = [49.276926732674355, -122.8490206310808];
+      const pnwCenter = [48.751616314349484, -122.47810779373064]; // Bellingham
       const map = L.map(mapRef.current).setView(pnwCenter, 5);
 
       L.tileLayer(
