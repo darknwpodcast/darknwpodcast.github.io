@@ -104,5 +104,15 @@
     "imdb": "https://www.imdb.com/name/nm17616464/",
     "socials": {
     }
+  },
+  {
+    "name": "Steve Kelsey",
+    "photo": "./demo-image-02.jpg",
+    "blurb": "Steve is the owner and creator of Dying of Exposure, a creative platform hub.",
+    "roles": "Executive Producer",
+    "imdb": "https://www.imdb.com/name/nm17680539/",
+    "socials": {
+      "website": "https://dyingofexposure.com"
+    }
   }
 ]
