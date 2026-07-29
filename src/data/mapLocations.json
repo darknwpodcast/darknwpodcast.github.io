@@ -36,15 +36,29 @@
   },
   {
     "id": 6,
+    "title": "Crystal Lakes Trail",
+    "subtitle": "Tales E05 - Located in Enumclaw, this trail is at the base of Mt. Rainier",
+    "lat": 46.92904468266425,
+    "lng": -121.53414116073492
+  },
+  {
+    "id": 7,
     "title": "Egyptian Theater",
-    "subtitle": "Tales TBD - outside the theater at the crossroads in Boise, Idaho",
+    "subtitle": "Tales E06 - outside the theater at the crossroads in Boise, Idaho",
     "lat": 43.61526381306698,
     "lng": -116.20210803836099
   },
   {
-    "id": 7,
+    "id": 8,
+    "title": "Mel's Hole",
+    "subtitle": "Tales E07 - the location of a deep conspiracy located in Ellensburg, Washington",
+    "lat": 46.998808,
+    "lng": -120.858583
+  },
+  {
+    "id": 88,
     "title": "Highway 101",
-    "subtitle": "Tales TBD - along a stretch of Highway 101 in Cannon Beach, Oregon",
+    "subtitle": "TBD - along a stretch of Highway 101 in Cannon Beach, Oregon",
     "lat": 45.91394390000475,
     "lng": -123.94235271344297
   },
